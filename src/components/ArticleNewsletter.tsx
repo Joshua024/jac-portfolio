@@ -36,7 +36,7 @@ export default function ArticleNewsletter({ heading, description }: ArticleNewsl
           <p className="text-primary font-medium text-sm">Thanks for subscribing!</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex gap-3 flex-1 md:max-w-lg">
+        <form onSubmit={handleSubmit} className="flex gap-3 flex-1 md:max-w-xl">
           <input
             type="email"
             value={email}
