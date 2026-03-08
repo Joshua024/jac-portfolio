@@ -1,10 +1,19 @@
 import Link from "next/link";
-import { Check } from "lucide-react";
+import {
+  Check, Code, Palette, Smartphone, Layers, ShoppingCart, TrendingUp,
+  Globe, Megaphone, Cpu, Zap, type LucideIcon,
+} from "lucide-react";
+
+const iconMap: Record<string, LucideIcon> = {
+  Code, Palette, Smartphone, Layers, ShoppingCart, TrendingUp,
+  Globe, Megaphone, Cpu, Zap,
+};
 
 interface ServiceItem {
   id: string;
   slug: string;
   title: string;
+  icon?: string;
   description: string;
   packageName: string;
   price: string;
@@ -20,6 +29,7 @@ const defaultServices: ServiceItem[] = [
     id: "1",
     slug: "ui-ux-design",
     title: "UI/UX Design",
+    icon: "Palette",
     description: "Creating intuitive, user-centered designs and experiences that delight users and drive business growth.",
     packageName: "Basic Package",
     price: "$1,499",
@@ -29,6 +39,7 @@ const defaultServices: ServiceItem[] = [
     id: "2",
     slug: "web-development",
     title: "Web Development",
+    icon: "Code",
     description: "Full-stack development, fast and secure websites and web applications using modern frameworks and best practices.",
     packageName: "Standard Package",
     price: "$2,499",
@@ -38,6 +49,7 @@ const defaultServices: ServiceItem[] = [
     id: "3",
     slug: "mobile-app-development",
     title: "Mobile App Development",
+    icon: "Smartphone",
     description: "Building high-performance cross-platform mobile applications that provide seamless user experiences.",
     packageName: "Premium",
     price: "$3,999",
@@ -47,6 +59,7 @@ const defaultServices: ServiceItem[] = [
     id: "4",
     slug: "brand-identity-design",
     title: "Brand Identity Design",
+    icon: "Layers",
     description: "Crafting distinctive brand identities including logos, color schemes, typography, and brand guidelines.",
     packageName: "Basic Package",
     price: "$1,499",
@@ -56,6 +69,7 @@ const defaultServices: ServiceItem[] = [
     id: "5",
     slug: "e-commerce-development",
     title: "E-Commerce Development",
+    icon: "ShoppingCart",
     description: "Building complete e-commerce solutions with payment processing, inventory management, and customer engagement.",
     packageName: "Standard",
     price: "$3,499",
@@ -65,6 +79,7 @@ const defaultServices: ServiceItem[] = [
     id: "6",
     slug: "digital-marketing",
     title: "Digital Marketing",
+    icon: "TrendingUp",
     description: "Strategic digital marketing campaigns to drive growth, increase visibility, traffic, and conversions through data-driven strategies.",
     packageName: "Monthly",
     price: "$1,999",
@@ -94,6 +109,14 @@ export default function Services({ services = defaultServices }: Props) {
               key={service.id}
               className="bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
+              {(() => {
+                const Icon = iconMap[service.icon || ""] || Code;
+                return (
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                    <Icon size={22} className="text-primary" />
+                  </div>
+                );
+              })()}
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {service.title}
               </h3>

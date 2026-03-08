@@ -62,6 +62,7 @@ export default async function Home() {
       id: s.id,
       slug: s.slug,
       title: s.title,
+      icon: s.icon,
       description: s.description,
       packageName: pricing.packageName || "Standard",
       price: pricing.price || "",
