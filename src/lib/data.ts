@@ -91,3 +91,11 @@ export async function getArticles() {
     orderBy: { createdAt: "desc" },
   });
 }
+
+// Footer Logos from DB
+export async function getFooterLogos() {
+  return prisma.footerLogo.findMany({
+    where: { published: true },
+    orderBy: { order: "asc" },
+  });
+}

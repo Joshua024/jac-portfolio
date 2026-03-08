@@ -17,6 +17,7 @@ import {
   Mail,
   Users,
   Building2,
+  Image,
   LogOut,
   Menu,
   X,
@@ -37,6 +38,7 @@ const navItems = [
   { href: "/admin/bookings", label: "Bookings", icon: Calendar },
   { href: "/admin/contacts", label: "Contact Messages", icon: Mail },
   { href: "/admin/newsletter", label: "Newsletter", icon: Users },
+  { href: "/admin/footer-logos", label: "Footer Logos", icon: Image },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
 

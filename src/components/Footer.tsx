@@ -1,7 +1,55 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Dribbble } from "lucide-react";
-import { getSiteSettings, getServices } from "@/lib/data";
+import {
+  Github,
+  Twitter,
+  Linkedin,
+  Dribbble,
+  Globe,
+  CreditCard,
+  Wallet,
+  BadgeDollarSign,
+  Banknote,
+  ShoppingBag,
+  Store,
+  Landmark,
+  CircleDollarSign,
+  HandCoins,
+  Receipt,
+  Coins,
+  PiggyBank,
+  Apple,
+  Chrome,
+  Figma,
+  Code,
+  Layers,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import { getSiteSettings, getServices, getFooterLogos } from "@/lib/data";
 import FooterNewsletter from "./FooterNewsletter";
+
+const logoIconMap: Record<string, LucideIcon> = {
+  Globe,
+  CreditCard,
+  Wallet,
+  BadgeDollarSign,
+  Banknote,
+  ShoppingBag,
+  Store,
+  Landmark,
+  CircleDollarSign,
+  HandCoins,
+  Receipt,
+  Coins,
+  PiggyBank,
+  Apple,
+  Chrome,
+  Figma,
+  Github,
+  Code,
+  Layers,
+  Zap,
+};
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -20,9 +68,10 @@ const socialIcons: Record<string, React.ComponentType<{ size?: number }>> = {
 };
 
 export default async function Footer() {
-  const [settings, dbServices] = await Promise.all([
+  const [settings, dbServices, dbLogos] = await Promise.all([
     getSiteSettings(),
     getServices(),
+    getFooterLogos(),
   ]);
 
   const siteName = settings?.siteName || "Joshua Adumchimma";
@@ -145,6 +194,24 @@ export default async function Footer() {
             </Link>
           </div>
         </div>
+
+        {/* Payment/Platform Logos */}
+        {dbLogos.length > 0 && (
+          <div className="mt-8 flex items-center justify-center gap-6">
+            {dbLogos.map((logo) => {
+              const Icon = logoIconMap[logo.icon] || Globe;
+              return (
+                <div
+                  key={logo.id}
+                  className="text-gray-600 hover:text-gray-400 transition-colors"
+                  title={logo.name}
+                >
+                  <Icon size={22} />
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </footer>
   );
