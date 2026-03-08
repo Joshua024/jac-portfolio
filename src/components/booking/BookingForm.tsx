@@ -175,7 +175,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
             </button>
             <button
               type="submit"
-              className="px-8 py-3 bg-accent text-white text-sm font-semibold rounded-xl hover:bg-accent-dark transition-colors"
+              className="px-8 py-3 bg-primary text-white text-sm font-semibold rounded-xl hover:bg-primary-dark transition-colors"
             >
               Confirm Booking
             </button>

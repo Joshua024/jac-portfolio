@@ -29,7 +29,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3.5 rounded-lg font-medium hover:bg-accent-dark transition-colors"
+                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3.5 rounded-lg font-medium hover:bg-primary-dark transition-colors"
               >
                 View Projects
                 <ArrowRight size={18} />
