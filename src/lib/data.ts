@@ -67,6 +67,23 @@ export async function getProjects() {
   });
 }
 
+// Trusted Companies from DB
+export async function getTrustedCompanies() {
+  return prisma.trustedCompany.findMany({
+    where: { published: true },
+    orderBy: { order: "asc" },
+  });
+}
+
+// Featured Projects from DB (limited for homepage)
+export async function getFeaturedProjects(limit?: number) {
+  return prisma.project.findMany({
+    where: { published: true },
+    orderBy: { order: "asc" },
+    ...(limit ? { take: limit } : {}),
+  });
+}
+
 // Articles from DB
 export async function getArticles() {
   return prisma.article.findMany({

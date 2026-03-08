@@ -31,9 +31,21 @@ const tagColors: Record<string, string> = {
   WordPress: "bg-sky-50 text-sky-700",
 };
 
-const categories = ["All Projects", "Web Design", "Mobile Apps", "Branding", "E-Commerce"];
+interface ProjectItem {
+  id: string | number;
+  slug: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
 
-const projects = [
+interface Props {
+  projects?: ProjectItem[];
+}
+
+const defaultProjects: ProjectItem[] = [
   {
     id: 1,
     title: "Luxe Fashion E-Commerce",
@@ -90,8 +102,10 @@ const projects = [
   },
 ];
 
-export default function FeaturedProjects() {
+export default function FeaturedProjects({ projects = defaultProjects }: Props) {
   const [activeTab, setActiveTab] = useState("All Projects");
+
+  const allCategories = ["All Projects", ...Array.from(new Set(projects.map((p) => p.category)))];
 
   const filtered =
     activeTab === "All Projects"
@@ -113,7 +127,7 @@ export default function FeaturedProjects() {
 
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((cat) => (
+          {allCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
