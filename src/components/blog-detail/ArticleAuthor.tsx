@@ -6,7 +6,7 @@ export default function ArticleAuthor() {
       <div className="flex items-center justify-between flex-wrap gap-4">
         {/* Author Info */}
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] flex items-center justify-center text-white font-bold text-sm">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] flex items-center justify-center text-white font-bold text-sm">
             JA
           </div>
           <div>

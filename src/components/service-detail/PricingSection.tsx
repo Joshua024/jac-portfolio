@@ -11,7 +11,7 @@ export default function PricingSection({ service }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#4F46E5] font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[#3B82F6] font-semibold text-sm uppercase tracking-wider">
             Investment
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
@@ -29,7 +29,7 @@ export default function PricingSection({ service }: Props) {
               key={index}
               className={`rounded-2xl p-8 relative ${
                 tier.highlighted
-                  ? "bg-[#4F46E5] text-white shadow-2xl shadow-[#4F46E5]/30 scale-105 z-10"
+                  ? "bg-[#3B82F6] text-white shadow-2xl shadow-[#3B82F6]/30 scale-105 z-10"
                   : "bg-white text-gray-900 shadow-lg"
               }`}
             >
@@ -68,7 +68,7 @@ export default function PricingSection({ service }: Props) {
                   <li key={fIndex} className="flex items-start gap-3">
                     <Check
                       className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                        tier.highlighted ? "text-white" : "text-[#4F46E5]"
+                        tier.highlighted ? "text-white" : "text-[#3B82F6]"
                       }`}
                     />
                     <span
@@ -87,8 +87,8 @@ export default function PricingSection({ service }: Props) {
                 href="#consultation"
                 className={`block w-full text-center py-3.5 rounded-xl font-semibold transition-colors ${
                   tier.highlighted
-                    ? "bg-white text-[#4F46E5] hover:bg-gray-100"
-                    : "bg-[#4F46E5] text-white hover:bg-[#4338CA]"
+                    ? "bg-white text-[#3B82F6] hover:bg-gray-100"
+                    : "bg-[#3B82F6] text-white hover:bg-[#2563EB]"
                 }`}
               >
                 Get Started

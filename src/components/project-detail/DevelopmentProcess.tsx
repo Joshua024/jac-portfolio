@@ -15,7 +15,7 @@ export default function DevelopmentProcess({ project }: Props) {
         <div className="max-w-5xl mx-auto">
           <div className="relative">
             {/* Center timeline line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#4F46E5]/20 -translate-x-1/2" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#3B82F6]/20 -translate-x-1/2" />
 
             <div className="space-y-16 md:space-y-24">
               {project.process.map((step, index) => {
@@ -23,7 +23,7 @@ export default function DevelopmentProcess({ project }: Props) {
                 return (
                   <div key={index} className="relative">
                     {/* Timeline dot */}
-                    <div className="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-10 h-10 bg-[#4F46E5] rounded-full items-center justify-center text-white font-bold text-sm z-10 shadow-lg shadow-[#4F46E5]/30">
+                    <div className="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-10 h-10 bg-[#3B82F6] rounded-full items-center justify-center text-white font-bold text-sm z-10 shadow-lg shadow-[#3B82F6]/30">
                       {index + 1}
                     </div>
 
@@ -57,7 +57,7 @@ export default function DevelopmentProcess({ project }: Props) {
                       >
                         {/* Mobile step number */}
                         <div className="md:hidden flex items-center gap-3 mb-3">
-                          <div className="w-8 h-8 bg-[#4F46E5] rounded-full flex items-center justify-center text-white font-bold text-xs">
+                          <div className="w-8 h-8 bg-[#3B82F6] rounded-full flex items-center justify-center text-white font-bold text-xs">
                             {index + 1}
                           </div>
                         </div>

@@ -43,7 +43,7 @@ export default function RelatedArticles({ articles }: RelatedArticlesProps) {
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#4F46E5] transition-colors line-clamp-2">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3B82F6] transition-colors line-clamp-2">
                     {article.title}
                   </h3>
 
@@ -56,7 +56,7 @@ export default function RelatedArticles({ articles }: RelatedArticlesProps) {
                       <Clock className="w-4 h-4" />
                       {article.readTime} min read
                     </div>
-                    <span className="text-[#4F46E5] text-sm font-semibold group-hover:underline">
+                    <span className="text-[#3B82F6] text-sm font-semibold group-hover:underline">
                       Read More
                     </span>
                   </div>

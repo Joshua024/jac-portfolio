@@ -135,7 +135,7 @@ export default function ProjectsContent() {
         {/* Back to Home */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-[#4F46E5] font-medium mb-8 hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-[#3B82F6] font-medium mb-8 hover:gap-3 transition-all"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -163,7 +163,7 @@ export default function ProjectsContent() {
                 setSearchQuery(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-12 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all text-gray-900"
+              className="w-full pl-12 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all text-gray-900"
             />
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function ProjectsContent() {
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                       selectedCategory === cat
-                        ? "text-[#4F46E5] font-medium"
+                        ? "text-[#3B82F6] font-medium"
                         : "text-gray-700"
                     }`}
                   >
@@ -231,7 +231,7 @@ export default function ProjectsContent() {
                   }}
                   className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                     selectedTechnology === "All"
-                      ? "text-[#4F46E5] font-medium"
+                      ? "text-[#3B82F6] font-medium"
                       : "text-gray-700"
                   }`}
                 >
@@ -247,7 +247,7 @@ export default function ProjectsContent() {
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                       selectedTechnology === tech
-                        ? "text-[#4F46E5] font-medium"
+                        ? "text-[#3B82F6] font-medium"
                         : "text-gray-700"
                     }`}
                   >
@@ -281,7 +281,7 @@ export default function ProjectsContent() {
                   }}
                   className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                     selectedStatus === "All"
-                      ? "text-[#4F46E5] font-medium"
+                      ? "text-[#3B82F6] font-medium"
                       : "text-gray-700"
                   }`}
                 >
@@ -297,7 +297,7 @@ export default function ProjectsContent() {
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                       selectedStatus === status
-                        ? "text-[#4F46E5] font-medium"
+                        ? "text-[#3B82F6] font-medium"
                         : "text-gray-700"
                     }`}
                   >
@@ -325,12 +325,12 @@ export default function ProjectsContent() {
             {activeFilters.map((filter) => (
               <span
                 key={filter.label}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-medium rounded-lg"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#3B82F6]/10 text-[#3B82F6] text-sm font-medium rounded-lg"
               >
                 {filter.label}
                 <button
                   onClick={filter.clear}
-                  className="hover:text-[#4338CA]"
+                  className="hover:text-[#2563EB]"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
@@ -372,7 +372,7 @@ export default function ProjectsContent() {
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                       sortBy === opt.value
-                        ? "text-[#4F46E5] font-medium"
+                        ? "text-[#3B82F6] font-medium"
                         : "text-gray-700"
                     }`}
                   >
@@ -398,7 +398,7 @@ export default function ProjectsContent() {
             </p>
             <button
               onClick={clearAllFilters}
-              className="text-[#4F46E5] font-semibold hover:underline"
+              className="text-[#3B82F6] font-semibold hover:underline"
             >
               Clear all filters
             </button>
@@ -423,7 +423,7 @@ export default function ProjectsContent() {
                     setItemsPerPage(Number(e.target.value));
                     setCurrentPage(1);
                   }}
-                  className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#4F46E5]"
+                  className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#3B82F6]"
                 >
                   {ITEMS_PER_PAGE_OPTIONS.map((opt) => (
                     <option key={opt} value={opt}>
@@ -450,7 +450,7 @@ export default function ProjectsContent() {
                       onClick={() => goToPage(page)}
                       className={`w-9 h-9 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
                         currentPage === page
-                          ? "bg-[#4F46E5] text-white"
+                          ? "bg-[#3B82F6] text-white"
                           : "text-gray-600 hover:bg-gray-100"
                       }`}
                     >

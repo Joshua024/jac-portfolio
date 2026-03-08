@@ -89,7 +89,7 @@ export default function ContactForm() {
               placeholder="Full Doe"
               value={formData.fullName}
               onChange={(e) => updateField("fullName", e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
             />
           </div>
           <div>
@@ -102,7 +102,7 @@ export default function ContactForm() {
               placeholder="john@example.com"
               value={formData.email}
               onChange={(e) => updateField("email", e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
             />
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function ContactForm() {
             <button
               type="button"
               onClick={() => setShowSubjects(!showSubjects)}
-              className="w-full flex items-center justify-between px-4 py-3 border border-gray-200 rounded-xl text-sm text-left focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+              className="w-full flex items-center justify-between px-4 py-3 border border-gray-200 rounded-xl text-sm text-left focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
             >
               <span className={formData.subject ? "text-gray-900" : "text-gray-400"}>
                 {formData.subject || "Select a subject"}
@@ -158,7 +158,7 @@ export default function ContactForm() {
               }
             }}
             rows={5}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 resize-none focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 resize-none focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
           />
           <p className="text-xs text-gray-400 mt-1">{charCount}/500 characters</p>
         </div>
@@ -169,11 +169,11 @@ export default function ContactForm() {
             type="checkbox"
             checked={agreed}
             onChange={(e) => setAgreed(e.target.checked)}
-            className="mt-0.5 w-4 h-4 rounded border-gray-300 text-[#4F46E5] focus:ring-[#4F46E5]"
+            className="mt-0.5 w-4 h-4 rounded border-gray-300 text-[#3B82F6] focus:ring-[#3B82F6]"
           />
           <span className="text-sm text-gray-600">
             I agree to the{" "}
-            <Link href="#" className="text-[#4F46E5] hover:underline">
+            <Link href="#" className="text-[#3B82F6] hover:underline">
               Privacy Policy
             </Link>{" "}
             and consent to being contacted regarding my inquiry
@@ -184,7 +184,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={!agreed}
-          className="px-8 py-3 bg-[#4F46E5] text-white font-semibold rounded-xl hover:bg-[#4338CA] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-xl hover:bg-[#2563EB] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Send Message
         </button>

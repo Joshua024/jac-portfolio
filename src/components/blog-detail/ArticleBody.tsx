@@ -92,7 +92,7 @@ export default function ArticleBody({ content }: ArticleBodyProps) {
               return (
                 <blockquote
                   key={index}
-                  className="my-6 pl-5 border-l-4 border-[#4F46E5] italic text-gray-600"
+                  className="my-6 pl-5 border-l-4 border-[#3B82F6] italic text-gray-600"
                 >
                   {section.content}
                 </blockquote>

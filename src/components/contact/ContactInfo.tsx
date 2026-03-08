@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function ContactInfo() {
   return (
-    <div className="bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] rounded-2xl p-8 md:p-10 text-white h-full flex flex-col">
+    <div className="bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] rounded-2xl p-8 md:p-10 text-white h-full flex flex-col">
       <h2 className="text-2xl font-bold mb-3">Contact Information</h2>
-      <p className="text-indigo-200 text-sm mb-8">
+      <p className="text-blue-200 text-sm mb-8">
         Feel free to reach out through any of these channels. I&apos;m always
         open to discussing new projects, creative ideas, or opportunities to be
         part of your vision.
@@ -19,9 +19,9 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold mb-1">Location</h3>
-            <p className="text-sm text-indigo-200">123 Innovation Avenue</p>
-            <p className="text-sm text-indigo-200">San Francisco, CA 94103</p>
-            <p className="text-sm text-indigo-200">United States</p>
+            <p className="text-sm text-blue-200">123 Innovation Avenue</p>
+            <p className="text-sm text-blue-200">San Francisco, CA 94103</p>
+            <p className="text-sm text-blue-200">United States</p>
           </div>
         </div>
 
@@ -32,14 +32,14 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold mb-1">Email</h3>
-            <a href="mailto:hello@creativedeveloper.com" className="text-sm text-indigo-200 hover:text-white transition-colors block">
+            <a href="mailto:hello@creativedeveloper.com" className="text-sm text-blue-200 hover:text-white transition-colors block">
               hello@creativedeveloper.com
             </a>
-            <p className="text-xs text-indigo-300 mt-0.5">For general inquiries and project discussions</p>
-            <a href="mailto:support@creativedeveloper.com" className="text-sm text-indigo-200 hover:text-white transition-colors block mt-1">
+            <p className="text-xs text-blue-300 mt-0.5">For general inquiries and project discussions</p>
+            <a href="mailto:support@creativedeveloper.com" className="text-sm text-blue-200 hover:text-white transition-colors block mt-1">
               support@creativedeveloper.com
             </a>
-            <p className="text-xs text-indigo-300 mt-0.5">For existing clients and technical support</p>
+            <p className="text-xs text-blue-300 mt-0.5">For existing clients and technical support</p>
           </div>
         </div>
 
@@ -50,10 +50,10 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold mb-1">Phone</h3>
-            <a href="tel:+14155555876" className="text-sm text-indigo-200 hover:text-white transition-colors">
+            <a href="tel:+14155555876" className="text-sm text-blue-200 hover:text-white transition-colors">
               +1 (415) 555-5876
             </a>
-            <p className="text-xs text-indigo-300 mt-0.5">Monday to Friday, 9AM to 6PM PST</p>
+            <p className="text-xs text-blue-300 mt-0.5">Monday to Friday, 9AM to 6PM PST</p>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-semibold mb-1">Schedule a Call</h3>
-            <p className="text-sm text-indigo-200 mb-3">
+            <p className="text-sm text-blue-200 mb-3">
               Book a 30-minute consultation to discuss your project needs.
             </p>
             <Link

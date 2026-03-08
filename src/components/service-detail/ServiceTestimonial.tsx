@@ -11,7 +11,7 @@ export default function ServiceTestimonial({ service }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#4F46E5] font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[#3B82F6] font-semibold text-sm uppercase tracking-wider">
             Client Feedback
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
@@ -22,7 +22,7 @@ export default function ServiceTestimonial({ service }: Props) {
         {/* Testimonial Card */}
         <div className="max-w-3xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12 relative">
-            <Quote className="w-10 h-10 text-[#4F46E5]/20 absolute top-8 left-8 md:top-12 md:left-12" />
+            <Quote className="w-10 h-10 text-[#3B82F6]/20 absolute top-8 left-8 md:top-12 md:left-12" />
 
             {/* Stars */}
             <div className="flex gap-1 mb-6 justify-center">
@@ -41,7 +41,7 @@ export default function ServiceTestimonial({ service }: Props) {
 
             {/* Author */}
             <div className="text-center">
-              <div className="w-12 h-12 bg-[#4F46E5] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+              <div className="w-12 h-12 bg-[#3B82F6] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
                 {service.testimonial.name.charAt(0)}
               </div>
               <p className="font-bold text-gray-900">

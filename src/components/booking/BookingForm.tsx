@@ -53,7 +53,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
           </p>
           <button
             onClick={() => router.push("/contact")}
-            className="px-6 py-3 bg-[#4F46E5] text-white font-semibold rounded-xl hover:bg-[#4338CA] transition-colors"
+            className="px-6 py-3 bg-[#3B82F6] text-white font-semibold rounded-xl hover:bg-[#2563EB] transition-colors"
           >
             Back to Contact
           </button>
@@ -94,7 +94,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 min={new Date().toISOString().split("T")[0]}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all appearance-none"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all appearance-none"
               />
               <CalendarDays className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
             </div>
@@ -113,8 +113,8 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
                   onClick={() => setSelectedSlot(slot)}
                   className={`py-3 rounded-xl text-sm font-medium border transition-colors ${
                     selectedSlot === slot
-                      ? "bg-[#4F46E5] text-white border-[#4F46E5]"
-                      : "bg-white text-gray-700 border-gray-200 hover:border-[#4F46E5] hover:text-[#4F46E5]"
+                      ? "bg-[#3B82F6] text-white border-[#3B82F6]"
+                      : "bg-white text-gray-700 border-gray-200 hover:border-[#3B82F6] hover:text-[#3B82F6]"
                   }`}
                 >
                   {slot}
@@ -134,7 +134,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
                 required
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
               />
             </div>
             <div>
@@ -146,7 +146,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
               />
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
               value={details}
               onChange={(e) => setDetails(e.target.value)}
               rows={5}
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 resize-none focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 resize-none focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
             />
           </div>
 
@@ -175,7 +175,7 @@ export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00
             </button>
             <button
               type="submit"
-              className="px-8 py-3 bg-[#4F46E5] text-white text-sm font-semibold rounded-xl hover:bg-[#4338CA] transition-colors"
+              className="px-8 py-3 bg-[#3B82F6] text-white text-sm font-semibold rounded-xl hover:bg-[#2563EB] transition-colors"
             >
               Confirm Booking
             </button>

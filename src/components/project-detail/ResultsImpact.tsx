@@ -52,7 +52,7 @@ export default function ResultsImpact({ project }: Props) {
               (value, index) => (
                 <div key={index} className="flex-1 flex flex-col items-center gap-1">
                   <div
-                    className="w-full bg-[#4F46E5]/80 rounded-t-md transition-all hover:bg-[#4F46E5]"
+                    className="w-full bg-[#3B82F6]/80 rounded-t-md transition-all hover:bg-[#3B82F6]"
                     style={{ height: `${(value / 100) * 160}px` }}
                   />
                   <span className="text-xs text-gray-400">

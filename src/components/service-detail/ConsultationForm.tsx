@@ -24,7 +24,7 @@ export default function ConsultationForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Content */}
           <div>
-            <span className="text-[#4F46E5] font-semibold text-sm uppercase tracking-wider">
+            <span className="text-[#3B82F6] font-semibold text-sm uppercase tracking-wider">
               Get In Touch
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">
@@ -38,8 +38,8 @@ export default function ConsultationForm() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#4F46E5]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#4F46E5] font-bold">1</span>
+                <div className="w-10 h-10 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#3B82F6] font-bold">1</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -51,8 +51,8 @@ export default function ConsultationForm() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#4F46E5]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#4F46E5] font-bold">2</span>
+                <div className="w-10 h-10 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#3B82F6] font-bold">2</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -64,8 +64,8 @@ export default function ConsultationForm() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#4F46E5]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#4F46E5] font-bold">3</span>
+                <div className="w-10 h-10 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#3B82F6] font-bold">3</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -97,7 +97,7 @@ export default function ConsultationForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all text-gray-900"
                     placeholder="John Doe"
                     required
                   />
@@ -116,7 +116,7 @@ export default function ConsultationForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all text-gray-900"
                     placeholder="john@example.com"
                     required
                   />
@@ -138,7 +138,7 @@ export default function ConsultationForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, company: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all text-gray-900"
                     placeholder="Company Name"
                   />
                 </div>
@@ -155,7 +155,7 @@ export default function ConsultationForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, budget: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all text-gray-900"
                   >
                     <option value="">Select budget</option>
                     <option value="1k-5k">$1,000 - $5,000</option>
@@ -180,7 +180,7 @@ export default function ConsultationForm() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all resize-none text-gray-900"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all resize-none text-gray-900"
                   placeholder="Tell us about your project, goals, and timeline..."
                   required
                 />
@@ -188,7 +188,7 @@ export default function ConsultationForm() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#4F46E5] text-white font-semibold rounded-xl hover:bg-[#4338CA] transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#3B82F6] text-white font-semibold rounded-xl hover:bg-[#2563EB] transition-colors"
               >
                 <Send className="w-5 h-5" />
                 Send Message

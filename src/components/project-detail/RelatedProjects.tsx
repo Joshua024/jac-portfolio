@@ -36,13 +36,13 @@ export default function RelatedProjects({ project }: Props) {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#4F46E5] transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3B82F6] transition-colors">
                   {proj!.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
                   {proj!.description}
                 </p>
-                <div className="flex items-center gap-2 text-[#4F46E5] font-semibold text-sm group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-[#3B82F6] font-semibold text-sm group-hover:gap-3 transition-all">
                   View Project
                   <ArrowRight className="w-4 h-4" />
                 </div>

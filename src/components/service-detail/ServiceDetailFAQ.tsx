@@ -15,7 +15,7 @@ export default function ServiceDetailFAQ({ faqs }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#4F46E5] font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[#3B82F6] font-semibold text-sm uppercase tracking-wider">
             Common Questions
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">

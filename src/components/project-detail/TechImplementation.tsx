@@ -23,7 +23,7 @@ export default function TechImplementation({ project }: Props) {
               <ul className="space-y-4">
                 {section.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#4F46E5] flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-[#3B82F6] flex-shrink-0 mt-0.5" />
                     <span className="text-gray-600">{item}</span>
                   </li>
                 ))}
@@ -44,13 +44,13 @@ export default function TechImplementation({ project }: Props) {
                   <span className="text-sm font-medium text-gray-700">
                     {metric.label}
                   </span>
-                  <span className="text-sm font-bold text-[#4F46E5]">
+                  <span className="text-sm font-bold text-[#3B82F6]">
                     {metric.value}%
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
                   <div
-                    className="bg-[#4F46E5] h-3 rounded-full transition-all duration-500"
+                    className="bg-[#3B82F6] h-3 rounded-full transition-all duration-500"
                     style={{ width: `${metric.value}%` }}
                   />
                 </div>

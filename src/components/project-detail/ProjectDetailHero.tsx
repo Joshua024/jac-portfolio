@@ -13,7 +13,7 @@ export default function ProjectDetailHero({ project }: Props) {
         {/* Back link */}
         <Link
           href="/projects"
-          className="inline-flex items-center gap-2 text-[#4F46E5] font-medium mb-8 hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-[#3B82F6] font-medium mb-8 hover:gap-3 transition-all"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Projects
@@ -23,7 +23,7 @@ export default function ProjectDetailHero({ project }: Props) {
           {/* Left content */}
           <div>
             {/* Category badge */}
-            <span className="inline-block px-3 py-1 bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-medium rounded-full mb-4">
+            <span className="inline-block px-3 py-1 bg-[#3B82F6]/10 text-[#3B82F6] text-sm font-medium rounded-full mb-4">
               {project.category}
             </span>
 
@@ -40,7 +40,7 @@ export default function ProjectDetailHero({ project }: Props) {
               {project.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1.5 bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-medium rounded-lg"
+                  className="px-3 py-1.5 bg-[#3B82F6]/10 text-[#3B82F6] text-sm font-medium rounded-lg"
                 >
                   {tag}
                 </span>
@@ -50,28 +50,28 @@ export default function ProjectDetailHero({ project }: Props) {
             {/* Meta info */}
             <div className="grid grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
-                <Briefcase className="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" />
+                <Briefcase className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Client</p>
                   <p className="text-gray-900 font-medium text-sm">{project.client}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Calendar className="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" />
+                <Calendar className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Timeline</p>
                   <p className="text-gray-900 font-medium text-sm">{project.timeline}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <User className="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" />
+                <User className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Role</p>
                   <p className="text-gray-900 font-medium text-sm">{project.role}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Users className="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" />
+                <Users className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Team Size</p>
                   <p className="text-gray-900 font-medium text-sm">{project.teamSize}</p>

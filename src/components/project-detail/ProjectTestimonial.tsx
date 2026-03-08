@@ -15,12 +15,12 @@ export default function ProjectTestimonial({ project }: Props) {
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl p-8 md:p-12 relative shadow-sm">
-            <Quote className="w-10 h-10 text-[#4F46E5]/15 absolute top-8 right-8 md:top-12 md:right-12" />
+            <Quote className="w-10 h-10 text-[#3B82F6]/15 absolute top-8 right-8 md:top-12 md:right-12" />
 
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Avatar */}
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-[#4F46E5] rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                <div className="w-20 h-20 bg-[#3B82F6] rounded-full flex items-center justify-center text-white font-bold text-2xl">
                   {project.testimonial.name.charAt(0)}
                 </div>
               </div>

@@ -86,7 +86,7 @@ export default function ContactFAQ({ faqs: propFaqs }: { faqs?: FAQItem[] }) {
           <p className="text-gray-500 text-sm mb-4">
             Don&apos;t see your question here?
           </p>
-          <button className="px-6 py-3 bg-[#4F46E5] text-white text-sm font-semibold rounded-xl hover:bg-[#4338CA] transition-colors">
+          <button className="px-6 py-3 bg-[#3B82F6] text-white text-sm font-semibold rounded-xl hover:bg-[#2563EB] transition-colors">
             Ask Your Question
           </button>
         </div>

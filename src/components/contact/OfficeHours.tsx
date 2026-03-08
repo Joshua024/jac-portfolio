@@ -14,7 +14,7 @@ export default function OfficeHours() {
             {/* Business Hours */}
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                <Clock className="w-5 h-5 text-[#4F46E5]" />
+                <Clock className="w-5 h-5 text-[#3B82F6]" />
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 mb-2">Business Hours</h3>
@@ -38,7 +38,7 @@ export default function OfficeHours() {
             {/* Time Zone */}
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                <Globe className="w-5 h-5 text-[#4F46E5]" />
+                <Globe className="w-5 h-5 text-[#3B82F6]" />
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 mb-1">Time Zone</h3>
@@ -50,7 +50,7 @@ export default function OfficeHours() {
             {/* Response Time */}
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                <MessageCircle className="w-5 h-5 text-[#4F46E5]" />
+                <MessageCircle className="w-5 h-5 text-[#3B82F6]" />
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 mb-1">Response Time</h3>
@@ -66,7 +66,7 @@ export default function OfficeHours() {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#4F46E5] text-sm font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-[#3B82F6] text-sm font-semibold hover:underline"
             >
               <MapPin className="w-4 h-4" />
               Get Directions
@@ -87,7 +87,7 @@ export default function OfficeHours() {
                 href="https://maps.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 border border-[#4F46E5] text-[#4F46E5] text-sm font-medium rounded-lg hover:bg-[#4F46E5] hover:text-white transition-colors"
+                className="px-4 py-2 border border-[#3B82F6] text-[#3B82F6] text-sm font-medium rounded-lg hover:bg-[#3B82F6] hover:text-white transition-colors"
               >
                 View Larger Map
               </a>

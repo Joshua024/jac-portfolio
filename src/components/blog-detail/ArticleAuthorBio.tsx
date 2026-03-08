@@ -25,7 +25,7 @@ export default function ArticleAuthorBio({ tags }: ArticleAuthorBioProps) {
       {/* Author Bio Card */}
       <div className="bg-gray-50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6">
         {/* Avatar */}
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
           JA
         </div>
 
@@ -34,7 +34,7 @@ export default function ArticleAuthorBio({ tags }: ArticleAuthorBioProps) {
           <h3 className="text-lg font-bold text-gray-900 mb-1">
             Joshua Adumchimma
           </h3>
-          <p className="text-sm text-[#4F46E5] font-medium mb-3">
+          <p className="text-sm text-[#3B82F6] font-medium mb-3">
             Creative Developer & Designer
           </p>
           <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -60,7 +60,7 @@ export default function ArticleAuthorBio({ tags }: ArticleAuthorBioProps) {
             </a>
             <a
               href="#"
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-500 hover:text-[#4F46E5] hover:border-[#4F46E5] transition-colors"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-500 hover:text-[#3B82F6] hover:border-[#3B82F6] transition-colors"
               aria-label="Website"
             >
               <Globe className="w-3.5 h-3.5" />

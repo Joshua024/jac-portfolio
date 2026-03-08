@@ -25,7 +25,7 @@ const statCards = [
   { key: "articles" as const, label: "Articles", icon: PenSquare, color: "bg-purple-500" },
   { key: "bookings" as const, label: "Bookings", icon: Calendar, color: "bg-orange-500" },
   { key: "contacts" as const, label: "Messages", icon: Mail, color: "bg-red-500" },
-  { key: "newsletter" as const, label: "Subscribers", icon: Users, color: "bg-indigo-500" },
+  { key: "newsletter" as const, label: "Subscribers", icon: Users, color: "bg-blue-500" },
 ];
 
 export default function AdminDashboardPage() {

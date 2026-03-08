@@ -105,7 +105,7 @@ export default function BlogContent() {
                 setSearchQuery(e.target.value);
                 setCurrentPage(1);
               }}
-              className="pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 w-44 focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none transition-all"
+              className="pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 w-44 focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition-all"
             />
           </div>
 
@@ -120,7 +120,7 @@ export default function BlogContent() {
                 }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === cat
-                    ? "bg-[#4F46E5] text-white"
+                    ? "bg-[#3B82F6] text-white"
                     : "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50"
                 }`}
               >
@@ -158,7 +158,7 @@ export default function BlogContent() {
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                       sortBy === opt.value
-                        ? "text-[#4F46E5] font-medium"
+                        ? "text-[#3B82F6] font-medium"
                         : "text-gray-700"
                     }`}
                   >
@@ -175,7 +175,7 @@ export default function BlogContent() {
               onClick={() => setViewMode("grid")}
               className={`p-2 rounded-md transition-colors ${
                 viewMode === "grid"
-                  ? "bg-[#4F46E5] text-white"
+                  ? "bg-[#3B82F6] text-white"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
@@ -185,7 +185,7 @@ export default function BlogContent() {
               onClick={() => setViewMode("list")}
               className={`p-2 rounded-md transition-colors ${
                 viewMode === "list"
-                  ? "bg-[#4F46E5] text-white"
+                  ? "bg-[#3B82F6] text-white"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
@@ -222,7 +222,7 @@ export default function BlogContent() {
                 setSelectedCategory("All Categories");
                 setCurrentPage(1);
               }}
-              className="text-[#4F46E5] font-semibold hover:underline"
+              className="text-[#3B82F6] font-semibold hover:underline"
             >
               Clear filters
             </button>
@@ -252,7 +252,7 @@ export default function BlogContent() {
                   onClick={() => goToPage(page)}
                   className={`w-9 h-9 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
                     currentPage === page
-                      ? "bg-[#4F46E5] text-white"
+                      ? "bg-[#3B82F6] text-white"
                       : "text-gray-600 hover:bg-gray-100"
                   }`}
                 >

@@ -13,14 +13,14 @@ export default function ProjectCard({ project }: Props) {
     >
       {/* Image */}
       <div className="relative h-52 bg-gray-100 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#4F46E5]/20 to-[#7C3AED]/20 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 to-[#1D4ED8]/20 flex items-center justify-center">
           <span className="text-gray-400 text-sm">Project Preview</span>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#4F46E5] transition-colors">
+        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3B82F6] transition-colors">
           {project.title}
         </h3>
         <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">

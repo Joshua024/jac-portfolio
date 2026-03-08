@@ -32,7 +32,7 @@ function CommentItem({ comment }: { comment: ArticleComment }) {
         </p>
         <button
           onClick={() => setShowReplyBox(!showReplyBox)}
-          className="text-xs text-[#4F46E5] font-medium hover:underline"
+          className="text-xs text-[#3B82F6] font-medium hover:underline"
         >
           Reply
         </button>
@@ -43,11 +43,11 @@ function CommentItem({ comment }: { comment: ArticleComment }) {
               value={replyText}
               onChange={(e) => setReplyText(e.target.value)}
               placeholder="Write a reply..."
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 resize-none focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 resize-none focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none"
               rows={3}
             />
             <div className="flex gap-2 mt-2">
-              <button className="px-4 py-2 bg-[#4F46E5] text-white text-xs font-medium rounded-lg hover:bg-[#4338CA] transition-colors">
+              <button className="px-4 py-2 bg-[#3B82F6] text-white text-xs font-medium rounded-lg hover:bg-[#2563EB] transition-colors">
                 Post Reply
               </button>
               <button
@@ -68,7 +68,7 @@ function CommentItem({ comment }: { comment: ArticleComment }) {
           <div className="mt-4 space-y-4 pl-2 border-l-2 border-gray-100">
             {comment.replies.map((reply) => (
               <div key={reply.id} className="flex gap-3 pl-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
                   {reply.avatar}
                 </div>
                 <div>
@@ -115,11 +115,11 @@ export default function ArticleComments({ comments }: ArticleCommentsProps) {
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="Leave a comment..."
-            className="w-full px-5 py-4 border border-gray-200 rounded-xl text-sm text-gray-900 resize-none focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent outline-none"
+            className="w-full px-5 py-4 border border-gray-200 rounded-xl text-sm text-gray-900 resize-none focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none"
             rows={4}
           />
           <div className="flex justify-end mt-3">
-            <button className="px-6 py-2.5 bg-[#4F46E5] text-white text-sm font-semibold rounded-xl hover:bg-[#4338CA] transition-colors">
+            <button className="px-6 py-2.5 bg-[#3B82F6] text-white text-sm font-semibold rounded-xl hover:bg-[#2563EB] transition-colors">
               Post Comment
             </button>
           </div>

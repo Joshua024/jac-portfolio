@@ -10,7 +10,7 @@ export default function ProcessSection({ service }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#4F46E5] font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[#3B82F6] font-semibold text-sm uppercase tracking-wider">
             How We Work
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
@@ -25,13 +25,13 @@ export default function ProcessSection({ service }: Props) {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-[#4F46E5]/20" />
+            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-[#3B82F6]/20" />
 
             <div className="space-y-12">
               {service.process.map((step, index) => (
                 <div key={index} className="relative flex gap-6 md:gap-8">
                   {/* Step number */}
-                  <div className="relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-[#4F46E5] rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg shadow-[#4F46E5]/30">
+                  <div className="relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-[#3B82F6] rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg shadow-[#3B82F6]/30">
                     {step.number}
                   </div>
 
