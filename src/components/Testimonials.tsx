@@ -1,6 +1,6 @@
 "use client";
 
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 interface TestimonialData {
   id: string;
@@ -57,7 +57,6 @@ export default function Testimonials({ testimonials: propTestimonials }: { testi
               key={testimonial.id}
               className="bg-gray-50 rounded-2xl p-8 flex flex-col"
             >
-              <Quote size={32} className="text-primary/20 mb-4" />
               <div className="flex gap-1 mb-3">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
