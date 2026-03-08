@@ -32,6 +32,11 @@ model SiteSettings {
   github      String @default("")
   twitter     String @default("")
   instagram   String @default("")
+  dribbble    String @default("")
+  footerDescription String @default("Creating beautiful, functional digital experiences that help businesses grow and thrive in the digital landscape.")
+  copyrightText     String @default("Portfolio & Blog CMS. All rights reserved.")
+  newsletterHeading String @default("Newsletter")
+  newsletterText    String @default("Subscribe to receive the latest articles and updates.")
   updatedAt   DateTime @updatedAt
 }
 

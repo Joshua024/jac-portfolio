@@ -5,7 +5,6 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import LatestArticles from "@/components/LatestArticles";
-import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices, getArticles } from "@/lib/data";
@@ -92,7 +91,6 @@ export default async function Home() {
         <Services services={services.length > 0 ? services : undefined} />
         <Testimonials testimonials={testimonials} />
         <LatestArticles articles={articles.length > 0 ? articles : undefined} />
-        <Newsletter />
         <Contact />
       </main>
       <Footer />

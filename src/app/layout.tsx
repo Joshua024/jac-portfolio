@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
   subsets: ["latin"],
 });
 
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
