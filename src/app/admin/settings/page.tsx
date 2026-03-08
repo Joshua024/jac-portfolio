@@ -23,6 +23,8 @@ interface Settings {
   copyrightText: string;
   newsletterHeading: string;
   newsletterText: string;
+  navCtaText: string;
+  navCtaLink: string;
 }
 
 const fieldGroups = [
@@ -53,6 +55,13 @@ const fieldGroups = [
       { name: "twitter", label: "Twitter URL" },
       { name: "instagram", label: "Instagram URL" },
       { name: "dribbble", label: "Dribbble URL" },
+    ],
+  },
+  {
+    title: "Header / Navigation",
+    fields: [
+      { name: "navCtaText", label: "CTA Button Text" },
+      { name: "navCtaLink", label: "CTA Button Link" },
     ],
   },
   {

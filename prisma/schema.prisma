@@ -37,6 +37,8 @@ model SiteSettings {
   copyrightText     String @default("Portfolio & Blog CMS. All rights reserved.")
   newsletterHeading String @default("Newsletter")
   newsletterText    String @default("Subscribe to receive the latest articles and updates.")
+  navCtaText        String @default("Hire Me")
+  navCtaLink        String @default("/contact")
   updatedAt   DateTime @updatedAt
 }
 
