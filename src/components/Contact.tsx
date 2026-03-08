@@ -14,7 +14,7 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Left - Contact Information Card */}
-          <div className="bg-primary text-white rounded-2xl p-8 flex flex-col justify-between">
+          <div className="bg-primary text-white rounded-2xl p-10 flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-bold mb-8">Contact Information</h3>
               <div className="space-y-6">
