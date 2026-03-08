@@ -93,66 +93,71 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
           </p>
         </div>
 
-        {/* Articles Layout: Featured (left) + Stacked (right) */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Featured Article */}
-          {featured && (
+        {/* Row 1: Featured Article — full width, image left + content right */}
+        {featured && (
+          <Link
+            href={`/blog/${featured.slug}`}
+            className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row mb-10"
+          >
+            <div className="md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
+              {featured.image && (
+                <img src={featured.image} alt={featured.title} className="w-full h-full object-cover" />
+              )}
+              <div className="absolute top-4 left-4 flex items-center gap-2">
+                <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[featured.category] || "bg-gray-100 text-gray-600"}`}>
+                  {featured.category}
+                </span>
+                <span className="text-xs bg-white/80 text-gray-600 px-3 py-1 rounded-full">{featured.readTime} min read</span>
+              </div>
+            </div>
+            <div className="md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-3">
+                {featured.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                {featured.excerpt}
+              </p>
+              <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold">
+                Read More
+                <ArrowRight size={14} />
+              </span>
+            </div>
+          </Link>
+        )}
+
+        {/* Row 2: 3 Article Cards — image top, content below */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {rest.map((article) => (
             <Link
-              href={`/blog/${featured.slug}`}
+              key={article.id}
+              href={`/blog/${article.slug}`}
               className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <div className="h-64 bg-gradient-to-br from-primary/10 to-primary/5" />
-              <div className="p-6 flex-1 flex flex-col">
+              <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
+                {article.image && (
+                  <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+                )}
+              </div>
+              <div className="p-5 flex-1 flex flex-col">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[featured.category] || "bg-gray-100 text-gray-600"}`}>
-                    {featured.category}
+                  <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}>
+                    {article.category}
                   </span>
-                  <span className="text-xs text-gray-400">{featured.readTime} min read</span>
+                  <span className="text-xs text-gray-400">{article.readTime} min read</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-3">
-                  {featured.title}
+                <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                  {article.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">
-                  {featured.excerpt}
+                <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 flex-1 mb-3">
+                  {article.excerpt}
                 </p>
-                <span className="inline-flex items-center gap-1 text-primary text-sm font-medium">
+                <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold">
                   Read More
-                  <ArrowRight size={14} />
+                  <ArrowRight size={12} />
                 </span>
               </div>
             </Link>
-          )}
-
-          {/* Stacked Articles */}
-          <div className="flex flex-col gap-6">
-            {rest.map((article) => (
-              <Link
-                key={article.id}
-                href={`/blog/${article.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-row"
-              >
-                <div className="w-40 min-h-full bg-gradient-to-br from-primary/10 to-primary/5 flex-shrink-0" />
-                <div className="p-5 flex-1 flex flex-col justify-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}>
-                      {article.category}
-                    </span>
-                    <span className="text-xs text-gray-400">{article.readTime} min read</span>
-                  </div>
-                  <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors mb-1.5 line-clamp-2">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-2">
-                    {article.excerpt}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-primary text-xs font-medium">
-                    Read More
-                    <ArrowRight size={12} />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          ))}
         </div>
 
         {/* View All Articles */}
