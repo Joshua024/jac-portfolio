@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: Props) {
     >
       {/* Image */}
       <div className="relative h-52 bg-gray-100 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 to-[#1D4ED8]/20 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 to-[#6366F1]/20 flex items-center justify-center">
           <span className="text-gray-400 text-sm">Project Preview</span>
         </div>
       </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ContactInfo() {
   return (
-    <div className="bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] rounded-2xl p-8 md:p-10 text-white h-full flex flex-col">
+    <div className="bg-gradient-to-br from-[#3B82F6] to-[#6366F1] rounded-2xl p-8 md:p-10 text-white h-full flex flex-col">
       <h2 className="text-2xl font-bold mb-3">Contact Information</h2>
       <p className="text-blue-200 text-sm mb-8">
         Feel free to reach out through any of these channels. I&apos;m always
@@ -69,7 +69,7 @@ export default function ContactInfo() {
             </p>
             <Link
               href="/book-appointment"
-              className="inline-block px-5 py-2.5 border border-white/30 rounded-lg text-sm font-medium hover:bg-white/10 transition-colors"
+              className="inline-block px-5 py-2.5 bg-accent rounded-lg text-sm font-medium hover:bg-accent-dark transition-colors"
             >
               Book Appointment
             </Link>

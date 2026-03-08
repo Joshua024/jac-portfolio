@@ -8,7 +8,7 @@ export default function ServiceDetailHero({ service }: Props) {
   const Icon = service.icon;
 
   return (
-    <section className="relative bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#3B82F6] to-[#6366F1] text-white overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
@@ -37,7 +37,7 @@ export default function ServiceDetailHero({ service }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#consultation"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#3B82F6] font-semibold rounded-xl hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors"
             >
               Get Started
             </a>

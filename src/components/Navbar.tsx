@@ -42,7 +42,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/book-appointment"
-              className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors"
+              className="bg-accent text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-accent-dark transition-colors"
             >
               Book Appointment
             </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/book-appointment"
-                className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors text-center mt-2"
+                className="bg-accent text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-accent-dark transition-colors text-center mt-2"
                 onClick={() => setMobileOpen(false)}
               >
                 Book Appointment

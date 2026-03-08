@@ -8,7 +8,7 @@ export default function ProjectCTA({ project }: Props) {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-3xl p-10 md:p-16 text-center text-white">
+        <div className="bg-gradient-to-r from-[#3B82F6] to-[#6366F1] rounded-3xl p-10 md:p-16 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {project.ctaTitle}
           </h2>

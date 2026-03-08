@@ -68,7 +68,7 @@ function CommentItem({ comment }: { comment: ArticleComment }) {
           <div className="mt-4 space-y-4 pl-2 border-l-2 border-gray-100">
             {comment.replies.map((reply) => (
               <div key={reply.id} className="flex gap-3 pl-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#6366F1] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
                   {reply.avatar}
                 </div>
                 <div>

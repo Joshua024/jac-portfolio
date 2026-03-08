@@ -25,7 +25,7 @@ export default function ArticleAuthorBio({ tags }: ArticleAuthorBioProps) {
       {/* Author Bio Card */}
       <div className="bg-gray-50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6">
         {/* Avatar */}
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#6366F1] flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
           JA
         </div>
 
