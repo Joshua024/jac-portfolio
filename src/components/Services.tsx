@@ -9,6 +9,19 @@ const iconMap: Record<string, LucideIcon> = {
   Globe, Megaphone, Cpu, Zap,
 };
 
+const iconColors: Record<string, { bg: string; text: string }> = {
+  Palette:      { bg: "bg-purple-50",  text: "text-purple-500" },
+  Code:         { bg: "bg-blue-50",    text: "text-blue-500" },
+  Smartphone:   { bg: "bg-green-50",   text: "text-green-500" },
+  Layers:       { bg: "bg-pink-50",    text: "text-pink-500" },
+  ShoppingCart:  { bg: "bg-orange-50",  text: "text-orange-500" },
+  TrendingUp:   { bg: "bg-cyan-50",    text: "text-cyan-500" },
+  Globe:        { bg: "bg-indigo-50",  text: "text-indigo-500" },
+  Megaphone:    { bg: "bg-rose-50",    text: "text-rose-500" },
+  Cpu:          { bg: "bg-amber-50",   text: "text-amber-500" },
+  Zap:          { bg: "bg-yellow-50",  text: "text-yellow-500" },
+};
+
 interface ServiceItem {
   id: string;
   slug: string;
@@ -111,9 +124,10 @@ export default function Services({ services = defaultServices }: Props) {
             >
               {(() => {
                 const Icon = iconMap[service.icon || ""] || Code;
+                const colors = iconColors[service.icon || ""] || { bg: "bg-blue-50", text: "text-blue-500" };
                 return (
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-                    <Icon size={22} className="text-primary" />
+                  <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center mb-5`}>
+                    <Icon size={22} className={colors.text} />
                   </div>
                 );
               })()}
