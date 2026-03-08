@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrustedBy from "@/components/TrustedBy";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -24,6 +25,7 @@ export default async function Home() {
       <Navbar />
       <main>
         <Hero />
+        <TrustedBy />
         <FeaturedProjects />
         <Services />
         <Testimonials testimonials={testimonials} />
