@@ -8,13 +8,14 @@ import LatestArticles from "@/components/LatestArticles";
 import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { getTestimonials, getTrustedCompanies, getFeaturedProjects } from "@/lib/data";
+import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices } from "@/lib/data";
 
 export default async function Home() {
-  const [dbTestimonials, dbCompanies, dbProjects] = await Promise.all([
+  const [dbTestimonials, dbCompanies, dbProjects, dbServices] = await Promise.all([
     getTestimonials("home"),
     getTrustedCompanies(),
     getFeaturedProjects(6),
+    getServices(),
   ]);
 
   const testimonials = dbTestimonials.map((t) => ({
@@ -52,6 +53,22 @@ export default async function Home() {
     };
   });
 
+  const services = dbServices.map((s) => {
+    let pricing = { packageName: "", price: "" };
+    let features: string[] = [];
+    try { pricing = JSON.parse(s.pricing); } catch {}
+    try { features = JSON.parse(s.highlights); } catch {}
+    return {
+      id: s.id,
+      slug: s.slug,
+      title: s.title,
+      description: s.description,
+      packageName: pricing.packageName || "Standard",
+      price: pricing.price || "",
+      features: Array.isArray(features) ? features : [],
+    };
+  });
+
   return (
     <>
       <Navbar />
@@ -59,7 +76,7 @@ export default async function Home() {
         <Hero />
         <TrustedBy companies={companies} />
         <FeaturedProjects projects={projects.length > 0 ? projects : undefined} />
-        <Services />
+        <Services services={services.length > 0 ? services : undefined} />
         <Testimonials testimonials={testimonials} />
         <LatestArticles />
         <Newsletter />

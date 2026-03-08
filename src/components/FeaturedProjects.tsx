@@ -192,7 +192,7 @@ export default function FeaturedProjects({ projects = defaultProjects }: Props) 
         <div className="text-center mt-12">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors"
           >
             View All Projects
             <ArrowRight size={16} />
