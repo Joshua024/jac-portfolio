@@ -22,7 +22,7 @@ const formFields = [
   { name: "company", label: "Company", type: "text" as const },
   { name: "content", label: "Content", type: "textarea" as const, required: true },
   { name: "rating", label: "Rating (1-5)", type: "number" as const },
-  { name: "image", label: "Image URL", type: "text" as const },
+  { name: "image", label: "Image", type: "image" as const },
   {
     name: "page",
     label: "Page",

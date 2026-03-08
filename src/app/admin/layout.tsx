@@ -41,6 +41,7 @@ const navItems = [
   { href: "/admin/contacts", label: "Contact Messages", icon: Mail },
   { href: "/admin/newsletter", label: "Newsletter", icon: Users },
   { href: "/admin/footer-logos", label: "Footer Logos", icon: Image },
+  { href: "/admin/media", label: "Media Library", icon: Image },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
 

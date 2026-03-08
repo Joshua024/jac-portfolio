@@ -24,7 +24,7 @@ const formFields = [
   { name: "category", label: "Category", type: "text" as const },
   { name: "date", label: "Date", type: "text" as const, placeholder: "Jan 15, 2025" },
   { name: "readTime", label: "Read Time (min)", type: "number" as const },
-  { name: "image", label: "Image URL", type: "text" as const },
+  { name: "image", label: "Image", type: "image" as const },
   { name: "tags", label: "Tags (JSON array)", type: "textarea" as const, placeholder: '["React", "Next.js"]' },
   { name: "content", label: "Content (JSON)", type: "textarea" as const },
   { name: "published", label: "Published", type: "checkbox" as const },

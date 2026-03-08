@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { Save, ChevronDown, ChevronRight } from "lucide-react";
+import { ImagePicker } from "@/components/admin/ImagePicker";
 
 interface PageContent {
   id: string;
@@ -160,14 +161,22 @@ export default function AdminPagesPage() {
                         edited[item.id] !== undefined
                           ? edited[item.id]
                           : item.value;
-                      const isLong = currentValue.length > 100;
+                      const isImage = /image|photo|avatar|thumbnail|banner|logo|cover/i.test(item.key);
+                      const isLong = !isImage && currentValue.length > 100;
 
                       return (
                         <div key={item.id}>
                           <label className="block text-xs font-medium text-gray-400 mb-1.5 uppercase tracking-wider">
                             {item.key.replace(/-/g, " ")}
                           </label>
-                          {isLong ? (
+                          {isImage ? (
+                            <ImagePicker
+                              value={currentValue}
+                              onChange={(url) =>
+                                handleChange(item.id, url)
+                              }
+                            />
+                          ) : isLong ? (
                             <textarea
                               value={currentValue}
                               onChange={(e) =>

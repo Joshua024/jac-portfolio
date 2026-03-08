@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus, Pencil, Trash2, X, Save, Search } from "lucide-react";
+import { ImagePicker } from "@/components/admin/ImagePicker";
 
 interface Column<T> {
   key: string;
@@ -22,7 +23,7 @@ interface AdminCrudProps<T extends { id: string }> {
 interface FormField {
   name: string;
   label: string;
-  type: "text" | "number" | "textarea" | "select" | "checkbox";
+  type: "text" | "number" | "textarea" | "select" | "checkbox" | "image";
   options?: { value: string; label: string }[];
   placeholder?: string;
   required?: boolean;
@@ -126,7 +127,14 @@ export function AdminCrud<T extends { id: string }>({
                     <span className="text-red-400 ml-1">*</span>
                   )}
                 </label>
-                {field.type === "textarea" ? (
+                {field.type === "image" ? (
+                  <ImagePicker
+                    value={(formData[field.name] as string) || ""}
+                    onChange={(url) =>
+                      setFormData({ ...formData, [field.name]: url })
+                    }
+                  />
+                ) : field.type === "textarea" ? (
                   <textarea
                     value={(formData[field.name] as string) || ""}
                     onChange={(e) =>

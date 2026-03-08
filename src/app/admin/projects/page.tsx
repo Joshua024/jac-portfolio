@@ -41,7 +41,7 @@ const formFields = [
   { name: "year", label: "Year", type: "text" as const },
   { name: "client", label: "Client", type: "text" as const },
   { name: "duration", label: "Duration", type: "text" as const },
-  { name: "image", label: "Image URL", type: "text" as const },
+  { name: "image", label: "Image", type: "image" as const },
   { name: "liveUrl", label: "Live URL", type: "text" as const },
   { name: "githubUrl", label: "GitHub URL", type: "text" as const },
   { name: "details", label: "Details (JSON)", type: "textarea" as const },

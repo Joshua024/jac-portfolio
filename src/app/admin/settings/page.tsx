@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { Save } from "lucide-react";
+import { ImagePicker } from "@/components/admin/ImagePicker";
 
 interface Settings {
   id: string;
@@ -65,7 +66,7 @@ const fieldGroups = [
       { name: "navCtaText", label: "CTA Button Text" },
       { name: "navCtaLink", label: "CTA Button Link" },
       { name: "logoType", label: "Logo Type (text or image)" },
-      { name: "logoImage", label: "Logo Image URL (if image type)" },
+      { name: "logoImage", label: "Logo Image", isImage: true },
     ],
   },
   {
@@ -138,20 +139,29 @@ export default function AdminSettingsPage() {
             <h2 className="text-lg font-semibold text-white mb-4">{group.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {group.fields.map((field) => (
-                <div key={field.name}>
+                <div key={field.name} className={field.isImage ? "md:col-span-2" : ""}>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
                     {field.label}
                   </label>
-                  <input
-                    type="text"
-                    value={
-                      (settings[field.name as keyof Settings] as string) || ""
-                    }
-                    onChange={(e) =>
-                      setSettings({ ...settings, [field.name]: e.target.value })
-                    }
-                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-                  />
+                  {field.isImage ? (
+                    <ImagePicker
+                      value={(settings[field.name as keyof Settings] as string) || ""}
+                      onChange={(url) =>
+                        setSettings({ ...settings, [field.name]: url })
+                      }
+                    />
+                  ) : (
+                    <input
+                      type="text"
+                      value={
+                        (settings[field.name as keyof Settings] as string) || ""
+                      }
+                      onChange={(e) =>
+                        setSettings({ ...settings, [field.name]: e.target.value })
+                      }
+                      className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                    />
+                  )}
                 </div>
               ))}
             </div>
