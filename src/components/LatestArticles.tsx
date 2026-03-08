@@ -144,7 +144,7 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
                   <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}>
                     {article.category}
                   </span>
-                  <span className="text-xs text-gray-400">{article.readTime} min read</span>
+                  <span className="text-xs text-gray-400">{article.date}</span>
                 </div>
                 <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
                   {article.title}
@@ -152,10 +152,13 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
                 <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 flex-1 mb-3">
                   {article.excerpt}
                 </p>
-                <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold">
-                  Read More
-                  <ArrowRight size={12} />
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-400">{article.readTime} min read</span>
+                  <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold">
+                    Read More
+                    <ArrowRight size={12} />
+                  </span>
+                </div>
               </div>
             </Link>
           ))}
