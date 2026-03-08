@@ -1,6 +1,6 @@
 "use client";
 
-import { Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 
 interface TestimonialData {
   id: string;
@@ -58,6 +58,15 @@ export default function Testimonials({ testimonials: propTestimonials }: { testi
               className="bg-gray-50 rounded-2xl p-8 flex flex-col"
             >
               <Quote size={32} className="text-primary/20 mb-4" />
+              <div className="flex gap-1 mb-3">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    size={16}
+                    className={i < (testimonial.rating ?? 5) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}
+                  />
+                ))}
+              </div>
               <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-8">
                 {testimonial.content}
               </p>
