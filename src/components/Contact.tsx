@@ -12,9 +12,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="rounded-2xl shadow-lg overflow-hidden lg:grid lg:grid-cols-5">
           {/* Left - Contact Information Card */}
-          <div className="lg:col-span-2 bg-primary text-white rounded-2xl p-10 flex flex-col justify-between">
+          <div className="lg:col-span-2 bg-primary text-white p-10 flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-bold mb-8">Contact Information</h3>
               <div className="space-y-6">
@@ -79,7 +79,7 @@ export default function Contact() {
           </div>
 
           {/* Right - Send Me a Message Form */}
-          <div className="lg:col-span-3 bg-white border border-gray-100 rounded-2xl p-8">
+          <div className="lg:col-span-3 bg-white p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Send Me a Message</h3>
             <form className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
