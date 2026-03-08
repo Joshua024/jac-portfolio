@@ -27,7 +27,7 @@ export default function ArticleNewsletter({ heading, description }: ArticleNewsl
 
   return (
     <div className="bg-gray-50 rounded-2xl p-8 md:p-10 mt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-      <div className="md:max-w-md">
+      <div className="md:max-w-sm shrink-0">
         <h3 className="text-xl font-bold text-gray-900">{heading}</h3>
         <p className="text-gray-500 text-sm mt-2 leading-relaxed">{description}</p>
       </div>
@@ -36,7 +36,7 @@ export default function ArticleNewsletter({ heading, description }: ArticleNewsl
           <p className="text-primary font-medium text-sm">Thanks for subscribing!</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex gap-3 flex-1 md:max-w-md">
+        <form onSubmit={handleSubmit} className="flex gap-3 flex-1">
           <input
             type="email"
             value={email}
