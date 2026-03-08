@@ -103,14 +103,15 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
               {featured.image && (
                 <img src={featured.image} alt={featured.title} className="w-full h-full object-cover" />
               )}
-              <div className="absolute top-4 left-4 flex items-center gap-2">
+            </div>
+            <div className="md:w-1/2 p-8 flex flex-col justify-center">
+              <div className="flex items-center gap-2 mb-3">
                 <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[featured.category] || "bg-gray-100 text-gray-600"}`}>
                   {featured.category}
                 </span>
-                <span className="text-xs bg-white/80 text-gray-600 px-3 py-1 rounded-full">{featured.readTime} min read</span>
+                <span className="text-xs text-gray-400">{featured.date}</span>
+                <span className="text-xs text-gray-400">{featured.readTime} min read</span>
               </div>
-            </div>
-            <div className="md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-3">
                 {featured.title}
               </h3>
