@@ -1,68 +1,80 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { MapPin, Clock, Globe, Phone, Users } from "lucide-react";
 
 export default function Contact() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left - Info */}
-          <div>
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Get In Touch
-            </span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2">
-              Contact Me
-            </h2>
-            <p className="text-gray-500 mt-4 max-w-md leading-relaxed">
-              Feel free to reach out for collaborations, questions, or just a friendly hello. I&apos;d love to hear from you!
-            </p>
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl font-bold text-gray-900">Get in Touch</h2>
+          <p className="text-gray-500 mt-3">
+            Have a project in mind or want to discuss a potential collaboration? I&apos;d love to hear from you.
+          </p>
+        </div>
 
-            <div className="space-y-6 mt-10">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <Mail size={20} className="text-primary" />
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500">Email</div>
-                  <div className="font-medium text-gray-900">
-                    hello@joshuaadumchimma.com
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left - Contact Information Card */}
+          <div className="bg-gray-900 text-white rounded-2xl p-8 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-bold mb-8">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-400 mb-1">Location</div>
+                    <div className="text-sm font-medium">Lagos, Nigeria</div>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <Phone size={20} className="text-primary" />
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500">Phone</div>
-                  <div className="font-medium text-gray-900">
-                    +1 (555) 123-4567
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                    <Clock size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-400 mb-1">Opening Hours</div>
+                    <div className="text-sm font-medium">Monday - Friday: 9AM - 6PM</div>
+                    <div className="text-sm text-gray-400">Saturday: 10AM - 4PM (by appt.)</div>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <MapPin size={20} className="text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                    <Globe size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-400 mb-1">Serving Areas</div>
+                    <div className="text-sm font-medium">Available for remote work worldwide</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-500">Location</div>
-                  <div className="font-medium text-gray-900">
-                    Lagos, Nigeria
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                    <Phone size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-400 mb-1">Phone</div>
+                    <div className="text-sm font-medium">+1 (555) 123-4567</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                    <Users size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-400 mb-1">Communities &amp; Socials</div>
+                    <div className="text-sm font-medium">Twitter, LinkedIn, GitHub, Dribbble</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right - Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          {/* Right - Send Me a Message Form */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Send Me a Message</h3>
             <form className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label
-                    htmlFor="contact-name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-2">
                     Your Name
                   </label>
                   <input
@@ -73,10 +85,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="contact-email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-2">
                     Your Email
                   </label>
                   <input
@@ -88,10 +97,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label
-                  htmlFor="contact-subject"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
+                <label htmlFor="contact-subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
                 </label>
                 <input
@@ -102,10 +108,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="contact-message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
+                <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -115,9 +118,19 @@ export default function Contact() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
                 />
               </div>
+              <div className="flex items-start gap-2">
+                <input
+                  id="contact-terms"
+                  type="checkbox"
+                  className="mt-1 rounded border-gray-300 text-primary focus:ring-primary"
+                />
+                <label htmlFor="contact-terms" className="text-xs text-gray-500">
+                  I agree to the <span className="text-primary underline">Privacy Terms</span> and <span className="text-accent underline">Terms of Service</span>
+                </label>
+              </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3.5 rounded-lg font-medium hover:bg-primary-dark transition-colors"
+                className="w-full bg-accent text-white py-3.5 rounded-lg font-medium hover:bg-accent-dark transition-colors"
               >
                 Send Message
               </button>
