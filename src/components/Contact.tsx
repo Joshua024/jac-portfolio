@@ -58,22 +58,22 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-auto pt-8">
-              <p className="text-sm text-white/60 mb-4">Connect with me</p>
-              <div className="flex items-center gap-3">
-                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <Linkedin size={16} className="text-white" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <Twitter size={16} className="text-white" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <Dribbble size={16} className="text-white" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <Github size={16} className="text-white" />
-                </a>
+              <div className="mt-8 ml-14">
+                <p className="text-sm text-white/60 mb-4">Connect with me</p>
+                <div className="flex items-center gap-3">
+                  <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                    <Linkedin size={16} className="text-white" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                    <Twitter size={16} className="text-white" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                    <Dribbble size={16} className="text-white" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                    <Github size={16} className="text-white" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
