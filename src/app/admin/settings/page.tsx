@@ -27,14 +27,6 @@ interface Settings {
   navCtaLink: string;
   logoType: string;
   logoImage: string;
-  heroHeading: string;
-  heroSubtext: string;
-  heroTags: string;
-  heroCta1Text: string;
-  heroCta1Link: string;
-  heroCta2Text: string;
-  heroCta2Link: string;
-  heroImage: string;
 }
 
 const fieldGroups = [
@@ -74,19 +66,6 @@ const fieldGroups = [
       { name: "navCtaLink", label: "CTA Button Link" },
       { name: "logoType", label: "Logo Type (text or image)" },
       { name: "logoImage", label: "Logo Image URL (if image type)" },
-    ],
-  },
-  {
-    title: "Hero Section",
-    fields: [
-      { name: "heroHeading", label: "Hero Heading" },
-      { name: "heroSubtext", label: "Hero Subtext" },
-      { name: "heroTags", label: "Hero Tags (JSON array, e.g. [\"UI/UX\", \"Web Dev\"])" },
-      { name: "heroCta1Text", label: "Primary CTA Text" },
-      { name: "heroCta1Link", label: "Primary CTA Link" },
-      { name: "heroCta2Text", label: "Secondary CTA Text" },
-      { name: "heroCta2Link", label: "Secondary CTA Link" },
-      { name: "heroImage", label: "Hero Background Image URL" },
     ],
   },
   {

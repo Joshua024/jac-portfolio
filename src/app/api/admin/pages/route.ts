@@ -18,7 +18,8 @@ export async function GET(request: Request) {
 }
 
 export async function PUT(request: Request) {
-  const items: { page: string; section: string; key: string; value: string; type?: string; order?: number }[] = await request.json();
+  const body = await request.json();
+  const items: { page: string; section: string; key: string; value: string; type?: string; order?: number }[] = body.contents ?? body;
 
   const results = [];
   for (const item of items) {

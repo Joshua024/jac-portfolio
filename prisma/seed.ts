@@ -59,6 +59,8 @@ async function main() {
     { page: "home", section: "hero", key: "stat2Label", value: "Projects Completed" },
     { page: "home", section: "hero", key: "stat3", value: "30+" },
     { page: "home", section: "hero", key: "stat3Label", value: "Happy Clients" },
+    { page: "home", section: "hero", key: "tags", value: "[\"UI/UX Design\",\"Web Development\",\"Digital Marketing\",\"Content Creation\"]" },
+    { page: "home", section: "hero", key: "image", value: "" },
     // Home Services
     { page: "home", section: "services", key: "label", value: "What I Do" },
     { page: "home", section: "services", key: "title", value: "Services & Expertise" },

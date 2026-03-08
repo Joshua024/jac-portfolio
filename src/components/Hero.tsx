@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 interface HeroProps {
+  badge: string;
   heading: string;
   subtext: string;
   tags: string[];
@@ -9,9 +10,16 @@ interface HeroProps {
   cta2Text: string;
   cta2Link: string;
   image: string;
+  stat1: string;
+  stat1Label: string;
+  stat2: string;
+  stat2Label: string;
+  stat3: string;
+  stat3Label: string;
 }
 
 export default function Hero({
+  badge,
   heading,
   subtext,
   tags,
@@ -20,7 +28,15 @@ export default function Hero({
   cta2Text,
   cta2Link,
   image,
+  stat1,
+  stat1Label,
+  stat2,
+  stat2Label,
+  stat3,
+  stat3Label,
 }: HeroProps) {
+  const hasStats = stat1 || stat2 || stat3;
+
   return (
     <section className="relative pt-20 min-h-[600px] lg:min-h-[540px]">
       {/* Background Image */}
@@ -38,6 +54,17 @@ export default function Hero({
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-2xl space-y-6">
+          {/* Badge */}
+          {badge && (
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium dark:bg-primary/20">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+              </span>
+              {badge}
+            </div>
+          )}
+
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
             {heading}
           </h1>
@@ -75,6 +102,30 @@ export default function Hero({
               {cta2Text}
             </Link>
           </div>
+
+          {/* Stats */}
+          {hasStats && (
+            <div className="flex gap-12 pt-4">
+              {stat1 && (
+                <div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white">{stat1}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat1Label}</div>
+                </div>
+              )}
+              {stat2 && (
+                <div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white">{stat2}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat2Label}</div>
+                </div>
+              )}
+              {stat3 && (
+                <div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white">{stat3}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat3Label}</div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </section>

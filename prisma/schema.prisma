@@ -41,14 +41,6 @@ model SiteSettings {
   navCtaLink        String @default("/book-appointment")
   logoType          String @default("text")
   logoImage         String @default("")
-  heroHeading       String @default("Creative Developer & Digital Storyteller")
-  heroSubtext       String @default("I create beautiful, functional websites and digital experiences that help businesses grow and thrive in the digital landscape.")
-  heroTags          String @default("[\"UI/UX Design\",\"Web Development\",\"Digital Marketing\",\"Content Creation\"]")
-  heroCta1Text      String @default("View My Work")
-  heroCta1Link      String @default("/projects")
-  heroCta2Text      String @default("Get in Touch")
-  heroCta2Link      String @default("/contact")
-  heroImage         String @default("")
   updatedAt   DateTime @updatedAt
 }
 

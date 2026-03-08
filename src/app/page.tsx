@@ -7,17 +7,20 @@ import Testimonials from "@/components/Testimonials";
 import LatestArticles from "@/components/LatestArticles";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices, getArticles, getSiteSettings } from "@/lib/data";
+import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices, getArticles, getSiteSettings, getPageContent } from "@/lib/data";
 
 export default async function Home() {
-  const [dbTestimonials, dbCompanies, dbProjects, dbServices, dbArticles, settings] = await Promise.all([
+  const [dbTestimonials, dbCompanies, dbProjects, dbServices, dbArticles, settings, heroContent] = await Promise.all([
     getTestimonials("home"),
     getTrustedCompanies(),
     getFeaturedProjects(6),
     getServices(),
     getArticles(),
     getSiteSettings(),
+    getPageContent("home", "hero"),
   ]);
+
+  const hero = Object.fromEntries(heroContent.map((c) => [c.key, c.value]));
 
   const testimonials = dbTestimonials.map((t) => ({
     id: t.id,
@@ -87,19 +90,26 @@ export default async function Home() {
       <Navbar />
       <main>
         <Hero
-          heading={settings?.heroHeading || "Creative Developer & Digital Storyteller"}
-          subtext={settings?.heroSubtext || "I craft beautiful, functional digital experiences that help businesses grow. Specializing in web development, UI/UX design, and brand identity."}
+          badge={hero.badge || "Available for Freelance Work"}
+          heading={hero.title || "Creative Developer & Digital Storyteller"}
+          subtext={hero.subtitle || "I craft beautiful, functional digital experiences that help businesses grow."}
           tags={(() => {
             try {
-              const parsed = JSON.parse(settings?.heroTags || "[]");
+              const parsed = JSON.parse(hero.tags || "[]");
               return Array.isArray(parsed) ? parsed : [];
             } catch { return []; }
           })()}
-          cta1Text={settings?.heroCta1Text || "View My Work"}
-          cta1Link={settings?.heroCta1Link || "/projects"}
-          cta2Text={settings?.heroCta2Text || "Get in Touch"}
-          cta2Link={settings?.heroCta2Link || "/contact"}
-          image={settings?.heroImage || ""}
+          cta1Text={hero.cta1Text || "View My Work"}
+          cta1Link={hero.cta1Link || "/projects"}
+          cta2Text={hero.cta2Text || "Get in Touch"}
+          cta2Link={hero.cta2Link || "/contact"}
+          image={hero.image || ""}
+          stat1={hero.stat1 || ""}
+          stat1Label={hero.stat1Label || ""}
+          stat2={hero.stat2 || ""}
+          stat2Label={hero.stat2Label || ""}
+          stat3={hero.stat3 || ""}
+          stat3Label={hero.stat3Label || ""}
         />
         <TrustedBy companies={companies} />
         <FeaturedProjects projects={projects.length > 0 ? projects : undefined} />
