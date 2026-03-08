@@ -1,4 +1,4 @@
-import { MapPin, Clock, Globe, Phone, Users } from "lucide-react";
+import { MapPin, Clock, Globe, Phone, Twitter, Linkedin, Github, Dribbble } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -55,15 +55,23 @@ export default function Contact() {
                     <div className="text-sm font-medium">+1 (555) 123-4567</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <Users size={18} className="text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">Communities &amp; Socials</div>
-                    <div className="text-sm font-medium">Twitter, LinkedIn, GitHub, Dribbble</div>
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div className="mt-10 pt-6 border-t border-white/10">
+              <p className="text-sm text-gray-400 mb-4">Connect with me on</p>
+              <div className="flex items-center gap-3">
+                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <Twitter size={16} className="text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <Linkedin size={16} className="text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <Github size={16} className="text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <Dribbble size={16} className="text-white" />
+                </a>
               </div>
             </div>
           </div>
@@ -125,12 +133,12 @@ export default function Contact() {
                   className="mt-1 rounded border-gray-300 text-primary focus:ring-primary"
                 />
                 <label htmlFor="contact-terms" className="text-xs text-gray-500">
-                  I agree to the <span className="text-primary underline">Privacy Terms</span> and <span className="text-accent underline">Terms of Service</span>
+                  I agree to the <span className="text-primary underline">Privacy Terms</span> and <span className="text-primary underline">Terms of Service</span>
                 </label>
               </div>
               <button
                 type="submit"
-                className="w-full bg-accent text-white py-3.5 rounded-lg font-medium hover:bg-accent-dark transition-colors"
+                className="w-full bg-primary text-white py-3.5 rounded-lg font-medium hover:bg-primary-dark transition-colors"
               >
                 Send Message
               </button>
