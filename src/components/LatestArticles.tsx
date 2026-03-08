@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 
 interface ArticleItem {
   id: string | number;
@@ -100,7 +100,7 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
             className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row mb-10"
           >
             <div className="md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
-              {featured.image && (
+              {featured.image && featured.image.startsWith("http") && (
                 <img src={featured.image} alt={featured.title} className="w-full h-full object-cover" />
               )}
             </div>
@@ -109,7 +109,7 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
                 <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[featured.category] || "bg-gray-100 text-gray-600"}`}>
                   {featured.category}
                 </span>
-                <span className="text-xs text-gray-400">{featured.date}</span>
+                <span className="inline-flex items-center gap-1 text-xs text-gray-400"><Calendar size={12} />{featured.date}</span>
                 <span className="text-xs text-gray-400">{featured.readTime} min read</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-3">
@@ -135,7 +135,7 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
               className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
-                {article.image && (
+                {article.image && article.image.startsWith("http") && (
                   <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
                 )}
               </div>
@@ -144,7 +144,7 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
                   <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}>
                     {article.category}
                   </span>
-                  <span className="text-xs text-gray-400">{article.date}</span>
+                  <span className="inline-flex items-center gap-1 text-xs text-gray-400"><Calendar size={12} />{article.date}</span>
                 </div>
                 <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
                   {article.title}
