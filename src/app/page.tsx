@@ -86,7 +86,21 @@ export default async function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
+        <Hero
+          heading={settings?.heroHeading || "Creative Developer & Digital Storyteller"}
+          subtext={settings?.heroSubtext || "I craft beautiful, functional digital experiences that help businesses grow. Specializing in web development, UI/UX design, and brand identity."}
+          tags={(() => {
+            try {
+              const parsed = JSON.parse(settings?.heroTags || "[]");
+              return Array.isArray(parsed) ? parsed : [];
+            } catch { return []; }
+          })()}
+          cta1Text={settings?.heroCta1Text || "View My Work"}
+          cta1Link={settings?.heroCta1Link || "/projects"}
+          cta2Text={settings?.heroCta2Text || "Get in Touch"}
+          cta2Link={settings?.heroCta2Link || "/contact"}
+          image={settings?.heroImage || ""}
+        />
         <TrustedBy companies={companies} />
         <FeaturedProjects projects={projects.length > 0 ? projects : undefined} />
         <Services services={services.length > 0 ? services : undefined} />
