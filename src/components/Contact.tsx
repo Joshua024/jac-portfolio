@@ -1,4 +1,4 @@
-import { MapPin, Clock, Globe, Phone, Twitter, Linkedin, Github, Dribbble } from "lucide-react";
+import { MapPin, Clock, Mail, Phone, Twitter, Linkedin, Github, Dribbble } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -19,58 +19,59 @@ export default function Contact() {
               <h3 className="text-xl font-bold mb-8">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin size={18} className="text-primary" />
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin size={18} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Location</div>
-                    <div className="text-sm font-medium">Lagos, Nigeria</div>
+                    <div className="text-sm text-white/60 mb-1">Location</div>
+                    <div className="text-sm font-medium">San Francisco, CA</div>
+                    <div className="text-sm text-white/60">United States</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <Clock size={18} className="text-primary" />
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <Clock size={18} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Opening Hours</div>
-                    <div className="text-sm font-medium">Monday - Friday: 9AM - 6PM</div>
-                    <div className="text-sm text-gray-400">Saturday: 10AM - 4PM (by appt.)</div>
+                    <div className="text-sm text-white/60 mb-1">Working Hours</div>
+                    <div className="text-sm font-medium">Monday - Friday: 9am - 6pm</div>
+                    <div className="text-sm text-white/60">Timezone: Pacific Time (PT)</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <Globe size={18} className="text-primary" />
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <Mail size={18} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Serving Areas</div>
-                    <div className="text-sm font-medium">Available for remote work worldwide</div>
+                    <div className="text-sm text-white/60 mb-1">Email</div>
+                    <div className="text-sm font-medium">hello@example.com</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <Phone size={18} className="text-primary" />
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <Phone size={18} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Phone</div>
+                    <div className="text-sm text-white/60 mb-1">Phone</div>
                     <div className="text-sm font-medium">+1 (555) 123-4567</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-10 pt-6 border-t border-white/10">
-              <p className="text-sm text-gray-400 mb-4">Connect with me on</p>
+            <div className="mt-10 pt-6 border-t border-white/20">
+              <p className="text-sm text-white/60 mb-4">Connect with me</p>
               <div className="flex items-center gap-3">
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <Twitter size={16} className="text-white" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                   <Linkedin size={16} className="text-white" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <Github size={16} className="text-white" />
+                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                  <Twitter size={16} className="text-white" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                   <Dribbble size={16} className="text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                  <Github size={16} className="text-white" />
                 </a>
               </div>
             </div>
@@ -111,7 +112,7 @@ export default function Contact() {
                 <input
                   id="contact-subject"
                   type="text"
-                  placeholder="Project Discussion"
+                  placeholder="Project Inquiry"
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                 />
               </div>
@@ -133,12 +134,12 @@ export default function Contact() {
                   className="mt-1 rounded border-gray-300 text-primary focus:ring-primary"
                 />
                 <label htmlFor="contact-terms" className="text-xs text-gray-500">
-                  I agree to the <span className="text-primary underline">Privacy Terms</span> and <span className="text-primary underline">Terms of Service</span>
+                  I agree to the <span className="text-primary underline">Privacy Policy</span> and <span className="text-primary underline">Terms of Service</span>
                 </label>
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3.5 rounded-lg font-medium hover:bg-primary-dark transition-colors"
+                className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors"
               >
                 Send Message
               </button>
