@@ -69,7 +69,7 @@ export default function ContactInfo() {
             </p>
             <Link
               href="/book-appointment"
-              className="inline-block px-5 py-2.5 bg-primary rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors"
+              className="inline-block px-5 py-2.5 bg-accent rounded-lg text-sm font-medium hover:bg-accent-dark transition-colors"
             >
               Book Appointment
             </Link>

@@ -18,7 +18,7 @@ export default function ServiceCTA({ service }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#consultation"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors"
             >
               Book a Consultation
             </a>
