@@ -135,7 +135,7 @@ export default function LatestArticles({ articles = defaultArticles, newsletterH
             <Link
               key={article.id}
               href={`/blog/${article.slug}`}
-              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col"
+              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
                 {article.image && article.image.startsWith("http") && (
