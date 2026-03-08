@@ -36,6 +36,7 @@ export default function Contact() {
                     <div className="text-sm text-white/60 mb-1">Working Hours</div>
                     <div className="text-sm font-medium">Monday - Friday: 9am - 6pm</div>
                     <div className="text-sm text-white/60">Timezone: Pacific Time (PT)</div>
+                    <div className="text-sm text-white/60 mt-1">Available for remote work worldwide</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -58,7 +59,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="mt-10 pt-6 border-t border-white/20">
+            <div className="mt-10">
               <p className="text-sm text-white/60 mb-4">Connect with me</p>
               <div className="flex items-center gap-3">
                 <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
