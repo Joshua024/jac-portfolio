@@ -112,8 +112,8 @@ export default function LatestArticles({ articles = defaultArticles, newsletterH
                 <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[featured.category] || "bg-gray-100 text-gray-600"}`}>
                   {featured.category}
                 </span>
-                <span className="inline-flex items-center gap-1 text-xs text-gray-400"><Calendar size={12} />{featured.date}</span>
-                <span className="text-xs text-gray-400">{featured.readTime} min read</span>
+                <span className="inline-flex items-center gap-1 text-xs text-gray-500"><Calendar size={12} />{featured.date}</span>
+                <span className="text-xs text-gray-500">{featured.readTime} min read</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-3">
                 {featured.title}
@@ -147,7 +147,7 @@ export default function LatestArticles({ articles = defaultArticles, newsletterH
                   <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}>
                     {article.category}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-xs text-gray-400"><Calendar size={12} />{article.date}</span>
+                  <span className="inline-flex items-center gap-1 text-xs text-gray-500"><Calendar size={12} />{article.date}</span>
                 </div>
                 <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
                   {article.title}
@@ -156,7 +156,7 @@ export default function LatestArticles({ articles = defaultArticles, newsletterH
                   {article.excerpt}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400">{article.readTime} min read</span>
+                  <span className="text-xs text-gray-500">{article.readTime} min read</span>
                   <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold">
                     Read More
                     <ArrowRight size={12} />
