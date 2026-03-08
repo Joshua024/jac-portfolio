@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
+import ArticleNewsletter from "./ArticleNewsletter";
 
 interface ArticleItem {
   id: string | number;
@@ -14,6 +15,8 @@ interface ArticleItem {
 
 interface Props {
   articles?: ArticleItem[];
+  newsletterHeading?: string;
+  newsletterText?: string;
 }
 
 const categoryColors: Record<string, string> = {
@@ -76,7 +79,7 @@ const defaultArticles: ArticleItem[] = [
   },
 ];
 
-export default function LatestArticles({ articles = defaultArticles }: Props) {
+export default function LatestArticles({ articles = defaultArticles, newsletterHeading = "Subscribe to My Newsletter", newsletterText = "Get the latest articles, tutorials, and insights delivered directly to your inbox. No spam, just valuable content to help you grow." }: Props) {
   const featured = articles[0];
   const rest = articles.slice(1, 4);
 
@@ -163,6 +166,9 @@ export default function LatestArticles({ articles = defaultArticles }: Props) {
             </Link>
           ))}
         </div>
+
+        {/* Newsletter */}
+        <ArticleNewsletter heading={newsletterHeading} description={newsletterText} />
 
         {/* View All Articles */}
         <div className="text-center mt-12">

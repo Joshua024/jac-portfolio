@@ -7,15 +7,16 @@ import Testimonials from "@/components/Testimonials";
 import LatestArticles from "@/components/LatestArticles";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices, getArticles } from "@/lib/data";
+import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices, getArticles, getSiteSettings } from "@/lib/data";
 
 export default async function Home() {
-  const [dbTestimonials, dbCompanies, dbProjects, dbServices, dbArticles] = await Promise.all([
+  const [dbTestimonials, dbCompanies, dbProjects, dbServices, dbArticles, settings] = await Promise.all([
     getTestimonials("home"),
     getTrustedCompanies(),
     getFeaturedProjects(6),
     getServices(),
     getArticles(),
+    getSiteSettings(),
   ]);
 
   const testimonials = dbTestimonials.map((t) => ({
@@ -90,7 +91,11 @@ export default async function Home() {
         <FeaturedProjects projects={projects.length > 0 ? projects : undefined} />
         <Services services={services.length > 0 ? services : undefined} />
         <Testimonials testimonials={testimonials} />
-        <LatestArticles articles={articles.length > 0 ? articles : undefined} />
+        <LatestArticles
+          articles={articles.length > 0 ? articles : undefined}
+          newsletterHeading={settings?.newsletterHeading || undefined}
+          newsletterText={settings?.newsletterText || undefined}
+        />
         <Contact />
       </main>
       <Footer />
