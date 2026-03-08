@@ -40,6 +40,14 @@ export async function getSiteSettings() {
   return prisma.siteSettings.findFirst();
 }
 
+// Navigation Links
+export async function getNavLinks() {
+  return prisma.navLink.findMany({
+    where: { published: true },
+    orderBy: { order: "asc" },
+  });
+}
+
 // Page Content
 export async function getPageContent(page: string, section?: string) {
   return prisma.pageContent.findMany({

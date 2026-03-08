@@ -22,11 +22,13 @@ import {
   Menu,
   X,
   ChevronRight,
+  Navigation,
 } from "lucide-react";
 
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/pages", label: "Page Content", icon: FileText },
+  { href: "/admin/nav-links", label: "Navigation Links", icon: Navigation },
   { href: "/admin/services", label: "Services", icon: Briefcase },
   { href: "/admin/projects", label: "Projects", icon: FolderKanban },
   { href: "/admin/articles", label: "Articles", icon: PenSquare },

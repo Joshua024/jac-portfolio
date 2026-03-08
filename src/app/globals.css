@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-primary: #3B82F6;
   --color-primary-dark: #2563EB;
@@ -29,4 +31,98 @@ html {
 body {
   background: #ffffff;
   color: #1a1a2e;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body,
+html.dark body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* ── Dark Mode Color Overrides ──────────────────────────── */
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Surfaces */
+html.dark .bg-white {
+  background-color: #1e293b;
+}
+html.dark .bg-gray-50 {
+  background-color: #111827;
+}
+html.dark .bg-gray-100 {
+  background-color: #1e293b;
+}
+html.dark .bg-gray-200 {
+  background-color: #334155;
+}
+
+/* Text */
+html.dark .text-gray-900 {
+  color: #f1f5f9;
+}
+html.dark .text-gray-800 {
+  color: #e2e8f0;
+}
+html.dark .text-gray-700 {
+  color: #cbd5e1;
+}
+html.dark .text-gray-600 {
+  color: #94a3b8;
+}
+html.dark .text-gray-500 {
+  color: #94a3b8;
+}
+html.dark .text-dark {
+  color: #f1f5f9;
+}
+
+/* Borders */
+html.dark .border-gray-100 {
+  border-color: #334155;
+}
+html.dark .border-gray-200 {
+  border-color: #334155;
+}
+html.dark .border-gray-300 {
+  border-color: #475569;
+}
+
+/* Dividers */
+html.dark .divide-gray-100 > * + * {
+  border-color: #334155;
+}
+html.dark .divide-gray-200 > * + * {
+  border-color: #334155;
+}
+
+/* Form elements (non-admin) */
+html.dark main input:not([type="checkbox"]):not([type="radio"]),
+html.dark main textarea,
+html.dark main select {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+html.dark main input::placeholder,
+html.dark main textarea::placeholder {
+  color: #64748b;
+}
+
+/* Hover state overrides */
+html.dark .hover\:bg-gray-100:hover {
+  background-color: #334155;
+}
+html.dark .hover\:bg-gray-50:hover {
+  background-color: #1e293b;
+}
+
+/* Shadow adjustments */
+html.dark .shadow-sm,
+html.dark .shadow-md,
+html.dark .shadow-lg {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
 }

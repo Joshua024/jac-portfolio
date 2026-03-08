@@ -25,6 +25,8 @@ interface Settings {
   newsletterText: string;
   navCtaText: string;
   navCtaLink: string;
+  logoType: string;
+  logoImage: string;
 }
 
 const fieldGroups = [
@@ -62,6 +64,8 @@ const fieldGroups = [
     fields: [
       { name: "navCtaText", label: "CTA Button Text" },
       { name: "navCtaLink", label: "CTA Button Link" },
+      { name: "logoType", label: "Logo Type (text or image)" },
+      { name: "logoImage", label: "Logo Image URL (if image type)" },
     ],
   },
   {

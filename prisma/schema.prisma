@@ -39,6 +39,8 @@ model SiteSettings {
   newsletterText    String @default("Subscribe to receive the latest articles and updates.")
   navCtaText        String @default("Hire Me")
   navCtaLink        String @default("/contact")
+  logoType          String @default("text")
+  logoImage         String @default("")
   updatedAt   DateTime @updatedAt
 }
 
@@ -198,6 +200,16 @@ model FooterLogo {
   id        String   @id @default(cuid())
   name      String
   icon      String   @default("Globe")
+  published Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model NavLink {
+  id        String   @id @default(cuid())
+  label     String
+  href      String
   published Boolean  @default(true)
   order     Int      @default(0)
   createdAt DateTime @default(now())
