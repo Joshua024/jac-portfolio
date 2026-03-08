@@ -11,7 +11,7 @@ export default async function Navbar() {
     <NavbarClient
       siteName={settings?.siteName || "Joshua Adumchimma"}
       navCtaText={settings?.navCtaText || "Hire Me"}
-      navCtaLink={settings?.navCtaLink || "/contact"}
+      navCtaLink={settings?.navCtaLink || "/book-appointment"}
       logoType={settings?.logoType || "text"}
       logoImage={settings?.logoImage || ""}
       navLinks={navLinks.map((l) => ({ id: l.id, label: l.label, href: l.href }))}
