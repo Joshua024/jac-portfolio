@@ -100,7 +100,7 @@ export default function LatestArticles({ articles = defaultArticles, newsletterH
         {featured && (
           <Link
             href={`/blog/${featured.slug}`}
-            className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row mb-10"
+            className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row mb-10"
           >
             <div className="md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
               {featured.image && featured.image.startsWith("http") && (
