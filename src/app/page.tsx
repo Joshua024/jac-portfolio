@@ -8,14 +8,15 @@ import LatestArticles from "@/components/LatestArticles";
 import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices } from "@/lib/data";
+import { getTestimonials, getTrustedCompanies, getFeaturedProjects, getServices, getArticles } from "@/lib/data";
 
 export default async function Home() {
-  const [dbTestimonials, dbCompanies, dbProjects, dbServices] = await Promise.all([
+  const [dbTestimonials, dbCompanies, dbProjects, dbServices, dbArticles] = await Promise.all([
     getTestimonials("home"),
     getTrustedCompanies(),
     getFeaturedProjects(6),
     getServices(),
+    getArticles(),
   ]);
 
   const testimonials = dbTestimonials.map((t) => ({
@@ -70,6 +71,17 @@ export default async function Home() {
     };
   });
 
+  const articles = dbArticles.slice(0, 4).map((a) => ({
+    id: a.id,
+    slug: a.slug,
+    title: a.title,
+    excerpt: a.excerpt,
+    category: a.category,
+    date: a.date,
+    readTime: a.readTime,
+    image: a.image,
+  }));
+
   return (
     <>
       <Navbar />
@@ -79,7 +91,7 @@ export default async function Home() {
         <FeaturedProjects projects={projects.length > 0 ? projects : undefined} />
         <Services services={services.length > 0 ? services : undefined} />
         <Testimonials testimonials={testimonials} />
-        <LatestArticles />
+        <LatestArticles articles={articles.length > 0 ? articles : undefined} />
         <Newsletter />
         <Contact />
       </main>
