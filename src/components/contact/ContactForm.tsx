@@ -25,10 +25,24 @@ export default function ContactForm() {
 
   const charCount = formData.message.length;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreed) return;
-    setSubmitted(true);
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    }
   };
 
   const updateField = (field: string, value: string) => {

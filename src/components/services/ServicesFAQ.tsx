@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
-const faqs = [
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const defaultFaqs: FAQItem[] = [
   {
     question: "How long does a typical project take to complete?",
     answer:
@@ -31,7 +36,8 @@ const faqs = [
   },
 ];
 
-export default function ServicesFAQ() {
+export default function ServicesFAQ({ faqs: propFaqs }: { faqs?: FAQItem[] }) {
+  const faqs = propFaqs && propFaqs.length > 0 ? propFaqs : defaultFaqs;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {

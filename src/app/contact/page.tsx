@@ -7,6 +7,7 @@ import ContactInfo from "@/components/contact/ContactInfo";
 import OfficeHours from "@/components/contact/OfficeHours";
 import ContactFAQ from "@/components/contact/ContactFAQ";
 import ContactCTA from "@/components/contact/ContactCTA";
+import { getFAQs } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact | JAC",
@@ -14,7 +15,10 @@ export const metadata: Metadata = {
     "Get in touch to discuss your project, request a quote, or just say hello.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const dbFaqs = await getFAQs("contact");
+  const faqs = dbFaqs.map((f) => ({ question: f.question, answer: f.answer }));
+
   return (
     <>
       <Navbar />
@@ -35,7 +39,7 @@ export default function ContactPage() {
       </section>
 
       <OfficeHours />
-      <ContactFAQ />
+      <ContactFAQ faqs={faqs} />
       <ContactCTA />
       <Footer />
     </>

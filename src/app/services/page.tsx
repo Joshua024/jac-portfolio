@@ -6,6 +6,7 @@ import OurProcess from "@/components/services/OurProcess";
 import ClientSuccessStories from "@/components/services/ClientSuccessStories";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ReadyToStart from "@/components/services/ReadyToStart";
+import { getFAQs } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
   description: "Comprehensive digital solutions tailored to help your business thrive in the digital landscape.",
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const dbFaqs = await getFAQs("services");
+  const faqs = dbFaqs.map((f) => ({ question: f.question, answer: f.answer }));
+
   return (
     <>
       <Navbar />
@@ -22,7 +26,7 @@ export default function ServicesPage() {
         <WhatWeOffer />
         <OurProcess />
         <ClientSuccessStories />
-        <ServicesFAQ />
+        <ServicesFAQ faqs={faqs} />
         <ReadyToStart />
       </main>
       <Footer />

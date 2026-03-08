@@ -7,8 +7,18 @@ import LatestArticles from "@/components/LatestArticles";
 import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { getTestimonials } from "@/lib/data";
 
-export default function Home() {
+export default async function Home() {
+  const dbTestimonials = await getTestimonials("home");
+  const testimonials = dbTestimonials.map((t) => ({
+    id: t.id,
+    name: t.name,
+    role: t.role ? `${t.role}${t.company ? `, ${t.company}` : ""}` : "",
+    content: t.content,
+    rating: t.rating,
+  }));
+
   return (
     <>
       <Navbar />
@@ -16,7 +26,7 @@ export default function Home() {
         <Hero />
         <FeaturedProjects />
         <Services />
-        <Testimonials />
+        <Testimonials testimonials={testimonials} />
         <LatestArticles />
         <Newsletter />
         <Contact />

@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const defaultFaqs: FAQItem[] = [
   {
     question: "What is your typical project process?",
     answer:
@@ -31,7 +36,8 @@ const faqs = [
   },
 ];
 
-export default function ContactFAQ() {
+export default function ContactFAQ({ faqs: propFaqs }: { faqs?: FAQItem[] }) {
+  const faqs = propFaqs && propFaqs.length > 0 ? propFaqs : defaultFaqs;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (

@@ -3,9 +3,17 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 
-const testimonials = [
+interface TestimonialData {
+  id: string;
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+}
+
+const defaultTestimonials: TestimonialData[] = [
   {
-    id: 1,
+    id: "1",
     name: "Sarah Johnson",
     role: "CEO, TechStart Inc.",
     content:
@@ -13,7 +21,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    id: 2,
+    id: "2",
     name: "Michael Chen",
     role: "Founder, DesignLab",
     content:
@@ -21,7 +29,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    id: 3,
+    id: "3",
     name: "Emily Davis",
     role: "Marketing Director, GrowthCo",
     content:
@@ -30,7 +38,8 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default function Testimonials({ testimonials: propTestimonials }: { testimonials?: TestimonialData[] }) {
+  const testimonials = propTestimonials && propTestimonials.length > 0 ? propTestimonials : defaultTestimonials;
   const [current, setCurrent] = useState(0);
 
   const prev = () =>

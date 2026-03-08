@@ -4,16 +4,7 @@ import { useState } from "react";
 import { CalendarDays, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const timeSlots = [
-  "9:00 AM",
-  "10:00 AM",
-  "11:00 AM",
-  "1:00 PM",
-  "2:00 PM",
-  "3:00 PM",
-];
-
-export default function BookingForm() {
+export default function BookingForm({ timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM"] }: { timeSlots?: string[] }) {
   const router = useRouter();
   const [date, setDate] = useState("");
   const [selectedSlot, setSelectedSlot] = useState("");
@@ -22,9 +13,23 @@ export default function BookingForm() {
   const [details, setDetails] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!date || !selectedSlot) return;
+    try {
+      await fetch("/api/bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fullName,
+          email,
+          date,
+          time: selectedSlot,
+          service: "Consultation",
+          message: details,
+        }),
+      });
+    } catch {}
     setSubmitted(true);
   };
 

@@ -1,0 +1,178 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id          String @id @default("default")
+  siteName    String @default("JAC")
+  siteTagline String @default("Creative Developer & Designer")
+  email       String @default("hello@creativedeveloper.com")
+  supportEmail String @default("support@creativedeveloper.com")
+  phone       String @default("+1 (415) 555-5876")
+  address     String @default("123 Innovation Avenue")
+  city        String @default("San Francisco")
+  state       String @default("CA")
+  zipCode     String @default("94103")
+  country     String @default("United States")
+  linkedIn    String @default("")
+  github      String @default("")
+  twitter     String @default("")
+  instagram   String @default("")
+  updatedAt   DateTime @updatedAt
+}
+
+model PageContent {
+  id      String @id @default(cuid())
+  page    String
+  section String
+  key     String
+  value   String @default("")
+  type    String @default("text")
+  order   Int    @default(0)
+
+  @@unique([page, section, key])
+}
+
+model Service {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  subtitle     String   @default("")
+  icon         String   @default("Code")
+  description  String   @default("")
+  highlights   String   @default("[]")
+  deliverables String   @default("[]")
+  process      String   @default("[]")
+  tools        String   @default("[]")
+  methodologies String  @default("[]")
+  principles   String   @default("[]")
+  testimonial  String   @default("{}")
+  pricing      String   @default("{}")
+  faqs         String   @default("[]")
+  relatedServices String @default("[]")
+  published    Boolean  @default(true)
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  category    String   @default("")
+  description String   @default("")
+  tags        String   @default("[]")
+  status      String   @default("completed")
+  year        String   @default("")
+  client      String   @default("")
+  duration    String   @default("")
+  image       String   @default("")
+  liveUrl     String   @default("")
+  githubUrl   String   @default("")
+  details     String   @default("{}")
+  published   Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Article {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  excerpt   String   @default("")
+  category  String   @default("")
+  date      String   @default("")
+  readTime  Int      @default(5)
+  image     String   @default("")
+  content   String   @default("[]")
+  tags      String   @default("[]")
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  role      String   @default("")
+  company   String   @default("")
+  content   String   @default("")
+  rating    Int      @default(5)
+  image     String   @default("")
+  page      String   @default("home")
+  published Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FAQ {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String   @default("")
+  page      String   @default("contact")
+  published Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id       String @id @default(cuid())
+  name     String
+  category String @default("")
+  level    Int    @default(0)
+  icon     String @default("")
+  order    Int    @default(0)
+}
+
+model TimeSlot {
+  id        String  @id @default(cuid())
+  time      String
+  available Boolean @default(true)
+  order     Int     @default(0)
+}
+
+model Booking {
+  id        String   @id @default(cuid())
+  date      String
+  timeSlot  String
+  fullName  String
+  email     String
+  details   String   @default("")
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  fullName  String
+  email     String
+  subject   String   @default("")
+  message   String   @default("")
+  status    String   @default("unread")
+  createdAt DateTime @default(now())
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
